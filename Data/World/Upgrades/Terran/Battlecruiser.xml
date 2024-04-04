@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<upgrade position="10" icon="Units/Terran/Battlecruiser">
+	<requiredUpgrades>
+		<upgrade name="Terran/Aircraft"/>
+	</requiredUpgrades>
+</upgrade>

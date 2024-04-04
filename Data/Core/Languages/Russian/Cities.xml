@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Terran" value="<string name='Factions/Terran'/>"/>
+	<entry name="Terran0" value="Новый Геттисбург"/>
+	<entry name="Terran1" value="Агрия"/>
+	<entry name="Terran2" value="Боралис"/>
+	<entry name="Terran3" value="Эльсэкаро"/>
+	<entry name="Terran4" value="Стайрлинг"/>
+	<entry name="Terran5" value="Мегатонна"/>
+	<entry name="Terran6" value="Новый Канаас"/>
+	<entry name="Terran7" value="Браксис"/>
+	<entry name="Terran8" value="Андарас"/>
+	<entry name="Terran9" value="Конкорд"/>
+	<entry name="Terran10" value="Мертвецкий Порт"/>
+	<entry name="Terran11" value="Новый Андарас"/>
+	<entry name="Terran12" value="Металополис"/>
+	<entry name="Terran13" value="Локстон"/>
+	<entry name="Terran14" value="Джоргентон"/>
+	<entry name="Terran15" value="Витфорд"/>
+	<entry name="Terran16" value="Тарсонис"/>
+	<entry name="Terran17" value="Обрыв Августина"/>
+	<entry name="TerranCount" value="18"/>
+</language>

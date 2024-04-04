@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="TargetOnlyAir" value="&lt;style name='Bold'/&gt; &lt;style color='GUI/Yellow'/&gt;Атакует только воздушные цели"/>
+	<entry name="TargetOnlyAirDescription" value=""/>
+
+	<entry name="TargetOnlyGround" value="&lt;style name='Bold'/&gt; &lt;style color='GUI/Yellow'/&gt;Атакует только наземные цели"/>
+	<entry name="TargetOnlyGroundDescription" value=""/>
+
+	<entry name="TargetOnlyStructure" value="&lt;style name='Bold'/&gt; &lt;style color='GUI/Yellow'/&gt;Атакует только постройки"/>
+	<entry name="TargetOnlyStructureDescription" value=""/>
+
+	<entry name="Terran/Wallbuster" value="Стенобой"/>
+	<entry name="Terran/WallbusterDescription" value="Наносит увеличенный урон постройкам."/>
+
+	<entry name="Terran/Deconstruction" value="Разбор"/>
+	<entry name="Terran/DeconstructionDescription" value="В следующем ходу этот юнит будет уничтожен."/>
+
+	<entry name="Terran/MedivacAfterburn" value="Форсаж"/>
+	<entry name="Terran/MedivacAfterburnDescription" value="Повышает очки движения Медэвака на один ход."/>
+
+	<entry name="Terran/AI" value="Искусственный интеллект"/>
+	<entry name="Terran/AIDescription" value="Значительно снижает потерю морали подразделения."/>
+
+	<entry name="Terran/AntiArmor" value="Сниженная Броня"/>
+	<entry name="Terran/AntiArmorDescription" value="Снижает количество брони у подразделения."/>
+
+	<entry name="Terran/ArmoredDivision" value="Бронированная дивизия"/>
+	<entry name="Terran/ArmoredDivisionDescription" value="Увеличивает броню техническим отрядам."/>
+
+	<entry name="Terran/BunkerUnitCount" value="[ТЕХНИЧЕСКОЕ] Счётчик пехоты бункера"/>
+	<entry name="Terran/BunkerUnitCountDescription" value=""/>
+
+	<entry name="Terran/CityTier2" value="Улучшенный контроль города"/>
+	<entry name="Terran/CityTier2Description" value="Увеличивает радиус доступных для присоединения плиток."/>
+
+	<entry name="Terran/CityTier3" value="Продвинутый контроль города"/>
+	<entry name="Terran/CityTier3Description" value="Увеличивает радиус доступных для присоединения плиток."/>
+
+	<entry name="Terran/Cloak" value="Невидимость"/>
+	<entry name="Terran/CloakDescription" value="Временно уменьшает полученный урон."/>
+
+	<entry name="Terran/DisplacementField" value="Искажающее поле"/>
+	<entry name="Terran/DisplacementFieldDescription" value="Уменьшает количество получаемого урона Миражам."/>
+
+	<entry name="Terran/FieldProduction" value="Полевое Производство"/>
+	<entry name="Terran/FieldProductionDescription" value="Данный юнит производится на поле боя и не может функционировать в процессе."/>
+
+	<entry name="Terran/FieldResearch" value="Полевые исследования"/>
+	<entry name="Terran/FieldResearchDescription" value="Пассивно производит изучение, а так же за полученый опыт."/>
+
+	<entry name="Terran/HitAndRun" value="Бей и беги"/>
+	<entry name="Terran/HitAndRunDescription" value="Позволяет ходить после атаки."/>
+
+	<entry name="Terran/InProduction" value="Занят Производством"/>
+	<entry name="Terran/InProductionDescription" value="Не может двигаться во время производства Юнита."/>
+
+	<entry name="Terran/InterferenceMatrix" value="Прерывающая матрица"/>
+	<entry name="Terran/InterferenceMatrixDescription" value="Не позволяет подразделению атаковать."/>
+
+	<entry name="Terran/Irradiated" value="Облучённый"/>
+	<entry name="Terran/IrradiatedDescription" value="Пассивно наносит урон подразделению."/>
+
+	<entry name="Terran/ResourceStructure" value="Добывающая Структура"/>
+	<entry name="Terran/ResourceStructureDescription" value="Не позволяет строить другие добывающие структуры рядом."/>
+
+	<entry name="Terran/ShellLoaded" value="Снаряд загружен"/>
+	<entry name="Terran/ShellLoadedDescription" value="Увеличивает максимальное количество очков действия, убавляется при каждой атаке."/>
+
+	<entry name="Terran/ShellUnloader" value="[ТЕХНИЧЕСКОЕ] Выгружатель снарядов Осадного танка"/>
+	<entry name="Terran/ShellUnloaderDescription" value=""/>
+
+	<entry name="Terran/Shield" value="Защитная матрица"/>
+	<entry name="Terran/ShieldDescription" value="Временно снижает получаемый урон подразделением."/>
+
+	<entry name="Terran/SiegeMode" value="Режим Осады"/>
+	<entry name="Terran/SiegeModeDescription" value="Позволяет Осадному танку использовать артилерийское орудие."/>
+
+	<entry name="Terran/SiegeWeapon" value="Осадное Орудие"/>
+	<entry name="Terran/SiegeWeaponDescription" value="Требует Осадный режим для работы."/>
+
+	<entry name="Terran/SnipeShot" value="Снайперский выстрел"/>
+	<entry name="Terran/SnipeShotDescription" value="Значительно уменьшает урон по постройкам."/>
+
+	<entry name="Terran/Stimpack" value="Стимуляторы"/>
+	<entry name="Terran/StimpackDescription" value="Увеличивает количество атак и очков движения."/>
+
+	<entry name="Terran/TankWeapon" value="Танковое орудие"/>
+	<entry name="Terran/TankWeaponDescription" value="Активируется только в режиме Танка."/>
+
+	<entry name="Terran/MarineShields" value="Боевые Щиты"/>
+	<entry name="Terran/MarineShieldsDescription" value="Повышает очки здоровья у Морпехов."/>
+	<entry name="Terran/MarineShieldsFlavor" value=""/>
+
+	<entry name="Terran/InfernalPreIgniters" value="Инфернальные Презажигатели"/>
+	<entry name="Terran/InfernalPreIgnitersDescription" value="Повышает урон огненного оружия Терранов."/>
+	<entry name="Terran/InfernalPreIgnitersFlavor" value=""/>
+
+	<entry name="Terran/GoliathAresClass" value="Класс вооружения ARES"/>
+	<entry name="Terran/GoliathAresClassDescription" value="Увеличивает дальность ракетных орудий Голиафа."/>
+	<entry name="Terran/GoliathAresClassFlavor" value=""/>
+
+	<entry name="Terran/UraniumAmmo" value="Урановые патроны"/>
+	<entry name="Terran/UraniumAmmoDescription" value="Увеличивает дальность и бронепробитие стрелкового оружия."/>
+	<entry name="Terran/UraniumAmmoFlavor" value=""/>
+
+	<entry name="Terran/AdvancedOptics" value="Улучшенная оптика"/>
+	<entry name="Terran/AdvancedOpticsDescription" value="Увеличивает дальность стрельбы технике Терранов."/>
+	<entry name="Terran/AdvancedOpticsFlavor" value=""/>
+
+	<entry name="Terran/TechArmor" value="Улучшенная броня техники"/>
+	<entry name="Terran/TechArmorDescription" value="Увеличивает броню всей технике Терранов."/>
+	<entry name="Terran/TechArmorFlavor" value=""/>
+
+	<entry name="Terran/Biosteel" value="Регениративная Биосталь"/>
+	<entry name="Terran/BiosteelDescription" value="Позволяет наземной технике Терранов регенирировать."/>
+	<entry name="Terran/BiosteelFlavor" value=""/>
+
+	<entry name="Terran/FireSuppression" value="Система пожаротушения"/>
+	<entry name="Terran/FireSuppressionDescription" value="Автоматически чинит структуру до 50% здоровья."/>
+	<entry name="Terran/FireSuppressionFlavor" value=""/>
+
+	<entry name="ExtraStructureArmour" value="Обшивка из Неостали"/>
+	<entry name="ExtraStructureArmourDescription" value="Увеличивает броню структурам Терранов."/>
+
+	<entry name="Terran/NeosteelFrame" value="Каркас из Неостали"/>
+	<entry name="Terran/NeosteelFrameDescription" value="Увеличивает гарнизон структурам Терранов."/>
+	<entry name="Terran/NeosteelFrameFlavor" value=""/>
+</language>

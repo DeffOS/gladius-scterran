@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Terran0" value="Джексон"/>
+	<entry name="Terran1" value="Гораций"/>
+	<entry name="Terran2" value="Арктур"/>
+	<entry name="Terran3" value="Джек"/>
+	<entry name="Terran4" value="Морган"/>
+	<entry name="Terran5" value="Эдмунд"/>
+	<entry name="Terran6" value="Чарли"/>
+	<entry name="TerranCount" value="7"/>
+</language>

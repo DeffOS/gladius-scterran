@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<weapon fireSound="Weapons/Terran/nuke_attacklaunch"
+				fireSoundCount="1"
+				explosionSound="Explosions/Terran/nuke_explosion"
+				explosionSoundCount="1"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="1"/>
+				<rangedArmorPenetration base="12"/>
+				<rangedAccuracy base="12" max="12"/>
+				<rangedDamage add="30"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMin="1" rangeMax="3"/>
+	<traits>
+		<trait name="ApocalypticMegaBlast"/>
+		<trait name="Terran/Wallbuster"/>
+		<trait name="InstantDeath"/>
+	</traits>
+</weapon>

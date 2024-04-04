@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<missileWeapon fireInterval="1.1"
+				fireSound="Weapons/Terran/marauder_attacklaunch"
+				fireSoundCount="6"
+				explosionSound="Impacts/Terran/marauder_explode"
+				explosionSoundCount="7"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="1"/>
+				<rangedArmorPenetration add="6"/>
+				<rangedDamage add="5"/>
+				<rangedAccuracy add="4"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="2"/>
+	<traits>
+		<trait name="HeavyWeapon"/>
+		<!-- <trait name="Armourbane"/> -->
+		<trait name="Terran/Wallbuster"/>
+		<trait name="Strikedown" requiredUpgrade="Terran/ConcussiveShells"/>
+		<!-- <trait name="TargetOnlyGround"/> -->
+	</traits>
+</weapon>

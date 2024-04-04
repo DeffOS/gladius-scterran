@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<projectileWeapon fireInterval="1.4"
+				fireSound="Weapons/Terran/siegetank_siegeattacklaunch"
+				fireSoundCount="4"
+				explosionSound="Impacts/Terran/siegetank_siegeattackimpact"
+				explosionSoundCount="5"
+
+				muzzleFlashesBlueprint="Effects/CannonMuzzleFlashes"/>
+	</model>	
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="1"/>
+				<rangedArmorPenetration add="10"/>
+				<rangedDamage add="22"/>
+				<rangedAccuracy base="8"/>
+				<strengthDamage base="0"/>
+				<ignoreLineOfSight add="1"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMin="2" rangeMax="5"/>
+	<traits>
+		<trait name="ApocalypticBlast"/>
+		<trait name="Terran/SiegeWeapon"/>
+		<trait name="TargetOnlyGround"/>
+	</traits>
+</weapon>

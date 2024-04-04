@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait>
+	<modifiers>
+		<modifier visible="1">
+			<effects>
+				<cargoSlotsRequired min="6" max="6"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

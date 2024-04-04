@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/ResourceBonus/Mineral"
+		category="Buff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<requisitions add="4"/>
+			</effects>
+		</modifier>
+		<modifier visible="1">
+			<conditions>
+				<tile match="Any">
+					<feature name="Rocks"/>
+					<feature name="ImperialRuin"/>
+				</tile>
+			</conditions>
+			<effects>
+				<requisitions add="4"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

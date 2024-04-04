@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/SiegeMode"
+	alwaysVisible="1">
+	<modifiers>
+		<modifier>
+			<conditions>
+				<unit>
+					<noTrait name="Terran/SiegeMode"/>
+				</unit>
+			</conditions>
+			<effects>
+				<accuracy min="-999" max="-999"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<conditions>
+				<encounter>
+					<opponent match="Any">
+						<trait name="Fortification"/>
+					</opponent>
+				</encounter>
+			</conditions>
+			<effects>
+				<armorPenetration mul="0.5"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

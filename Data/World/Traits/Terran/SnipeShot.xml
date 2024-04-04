@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/Snipe"
+		alwaysVisible="1">
+	<targetConditions>
+		<unit>
+			<noTrait name="Fortification"/>
+		</unit>
+	</targetConditions>
+	<modifiers>
+		<modifier>
+			<conditions>
+				<encounter>
+					<opponent match="Any">
+						<trait name="Vehicle"/>
+					</opponent>
+				</encounter>
+			</conditions>
+			<effects>
+				<damage mul="-0.9"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

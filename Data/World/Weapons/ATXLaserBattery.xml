@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<projectileWeapon fireInterval="0.16"
+				fireSound="Weapons/Terran/battlecruiser_attacklaunch"
+				fireSoundCount="3"
+
+				muzzleFlashesBlueprint="Effects/PlasmaMuzzleFlashes"
+				directionalMuzzleFlashesBlueprint="Effects/PlasmaDirectionalMuzzleFlashes"
+				projectilesBlueprint="Effects/PlasmaProjectiles"
+				explosionsBlueprint="Effects/PlasmaExplosions"
+				explosionsEmitterBlueprint="Effects/NecronExplosionsEmitter"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="4"/>
+				<rangedArmorPenetration add="6"/>
+				<rangedDamage add="5"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="2"/>
+	<traits>
+		<trait name="Luminagen"/>
+		<trait name="Assault"/>
+	</traits>
+</weapon>

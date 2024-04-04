@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/SiegeMode">
+	<modifiers>
+		<modifier>
+			<effects>
+				<!--movement max="0"/-->
+				<movementMax max="0"/>
+				<armor add="2"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

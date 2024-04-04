@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<upgrade position="11" icon="Upgrades/Terran/Napalm">
+	<requiredUpgrades>
+		<upgrade name="Terran/Firebat"/>
+		<upgrade name="Terran/Vehicles"/>
+	</requiredUpgrades>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseVehiclesScore base="1.0"/>
+				<increaseInfantryScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+</upgrade>

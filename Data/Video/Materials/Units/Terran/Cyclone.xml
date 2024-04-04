@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/CycloneDiffuse"/>
+		<texture name="Units/Terran/CycloneNormal"/>
+		<texture name="Units/Terran/CycloneSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

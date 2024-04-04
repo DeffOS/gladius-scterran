@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Hellion"
+				material="Units/Terran/Hellion"
+				idleAnimation="Units/Terran/HellionIdle0"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="0.4 0.4 0.4"
+				explosionsBone="Unit_Terran_Jackal_Body"/>
+	</model>
+	<group size="4" rowSize="3" memberDeltaX="90" memberDeltaY="80"/>
+	<weapons>
+		<weapon name="Flamer">
+			<model>
+				<flamerWeapon muzzleBone="Muzzle0"/>		
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="5"/>
+				<hitpointsMax base="6"/>
+				<moraleMax base="10"/>
+				<movementMax base="5"/>
+				<rangedAccuracy base="6"/>
+
+				<productionCost base="30.0"/>
+				<requisitionsCost base="32.0"/>
+				<requisitionsUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseVehiclesScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/HellionAttack"
+						beginFire="0.33"
+						endFire="2.6"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/HellionIdle0"
+						sound="Units/Terran/VehicleExplode"
+						soundCount="6"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/HellionWalk"
+						sound="Units/Terran/Hellion/hellion_movement"
+						soundCount="6"
+						animationSpeed="0.75"/>
+			</model>		
+		</move>
+		<scout consumedActionPoints="0"
+				consumedMovement="0"
+				cooldown="3"
+				requiredActionPoints="0">
+			<model>
+				<action sound="Actions/Scan"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" radius="3">
+							<modifiers>
+								<modifier>
+									<effects>
+										<reveal/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</scout>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Terran/HitAndRun"/>
+		<trait name="Vehicle"/>
+	</traits>
+</unit>

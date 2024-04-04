@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/SiegeTank"
+				material="Units/Terran/SiegeTank"
+				idleAnimation="Units/Terran/SiegeTankIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="1.2 1.2 1.2"
+				explosionsBone="Bone_Turret_Base"
+				uvAnimated="1"/>
+	</model>
+	<weapons>
+	    <weapon name="CrucioPlasmaCannon"
+				slotName="Regular">
+			<model>
+				<projectileWeapon muzzleBone="Muzzle"
+						muzzleCount="2"
+						fireInterval="0.56"/>
+			</model>	
+		</weapon>
+		<weapon name="CrucioShockCannon"
+				slotName="Deployed">
+			<model>
+				<projectileWeapon muzzleBone="Muzzle"
+						muzzleCount="2"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="25.0"/>
+				<itemSlots base="6"/>
+				<levelMax base="9"/>
+				<moraleMax base="16"/>
+				<movementMax base="3"/>
+				<cargoSlotsRequired base="6"/>
+
+				<productionCost base="48.0"/>
+				<influenceCost base="96.0"/>
+				<requisitionsCost base="96.0"/>
+				<biomassCost base="64.0"/>
+				<influenceUpkeep base="6.0"/>
+				<biomassUpkeep base="4.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseHeroesScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/SiegeTankAttack"
+						beginFire="0.33"
+						endFire="2.6"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/SiegeTankIdle"
+						sound="Units/Terran/SiegeTank/siegetank_death"
+						soundCount="2"
+						soundDelay="0.2"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/SiegeTankWalk"
+						sound="Units/Terran/FootstepsInfantry"
+						soundCount="4"
+						animationSpeed="0.75"/>
+			</model>		
+		</move>
+		<genericUnitAbility name="Terran/LoadShell"
+				rank="-1"
+				rankMax="2"
+				usableInTransport="1"
+				passive="1"
+				enabled="0"
+				disableable="1">
+			<model>
+				<action	sound="Actions/Terran/siegetank_scr_siegein"/>
+			</model>	
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Terran/ShellLoader"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<jumpPack cooldown="5"
+				rank="-1"
+				rankMax="2"
+				requiredActionPoints="1"
+				consumedActionPoints="1"
+				requiredMovement="0"
+				consumedMovement="1">
+			<model>
+				<action animation="Units/Terran/SiegeTankJump"
+						sound="Actions/Terran/terran_buildingliftoff"
+						soundCount="2"/>
+			</model>
+			<modifiers>
+				<modifier>
+					<effects>
+						<movement maxMin="2" maxMax="4"/>
+						<movementMax maxMin="2" maxMax="4"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</jumpPack>
+		<genericUnitAbility name="Terran/ArmoredDivision"
+				passive="1"
+				rank="-1"
+				rankMax="2">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" excludeRadius="0" radius="1">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Terran/ArmoredDivision"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/SiegeMode"
+				elite="1"
+				rank="-1"
+				rankMax="0"
+				cooldown="1"
+				requiredActionPoints="1"
+				consumedActionPoints="4">
+			<model>
+				<action sound="Actions/Terran/siegetank_morphtosiege"
+						soundCount="1"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<conditions>
+										<unit>
+											<noTrait name="Terran/SiegeMode"/>
+											<noTrait name="DummyTrait"/>
+										</unit>
+									</conditions>
+									<effects>
+										<addTrait name="Terran/SiegeMode"/>
+										<addTrait name="DummyTrait"/>
+									</effects>
+								</modifier>
+								<modifier>
+									<conditions>
+										<unit>
+											<trait name="Terran/SiegeMode"/>
+											<noTrait name="DummyTrait"/>
+										</unit>
+									</conditions>
+									<effects>
+										<removeTrait name="Terran/SiegeMode"/>
+										<addTrait name="DummyTrait"/>
+									</effects>
+								</modifier>
+								<modifier>
+									<effects>
+										<removeTrait name="DummyTrait"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<levelUp/>
+		<shop/>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Hero"/>
+		<trait name="Tank"/>
+		<trait name="MonstrousCreature"/>
+		<!-- <trait name="Vehicle"/> -->
+		<trait name="Terran/ShellUnloader"/>
+	</traits>
+</unit>

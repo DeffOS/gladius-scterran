@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait visible="0">
+	<onUnitDisappeared>
+		<area affects="Tile">
+			<modifiers>
+				<modifier>
+					<effects>
+						<removeFeature name="SupplyDepot"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</area>
+	</onUnitDisappeared>
+</trait>

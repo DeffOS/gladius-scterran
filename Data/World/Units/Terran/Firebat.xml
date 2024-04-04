@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Firebat"
+				material="Units/Terran/Firebat"
+				idleAnimation="Units/Terran/FirebatIdle"
+				idleAnimationCount="4"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="0.7 0.7 0.7"
+				bloodBone="BoneBack02"
+				walker="1"/>
+	</model>
+	<group size="3" rowSize="2" memberDeltaX="100" memberDeltaY="90"/>
+	<weapons>
+		<weapon name="HeavyFlamer">
+			<model>
+				<flamerWeapon muzzleBone="Muzzle"
+						muzzleCount="2"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="9"/>
+				<hitpointsMax base="6"/>
+				<meleeAccuracy base="8"/>
+				<meleeAttacks base="1"/>
+				<strengthDamage base="1.5"/>
+				<moraleMax base="14"/>
+				<movementMax base="3"/>
+				<cargoSlotsRequired base="2"/>
+
+				<productionCost base="40.0"/>
+				<requisitionsCost base="48.0"/>
+				<biomassCost base="24.0"/>
+				<requisitionsUpkeep base="3.0"/>
+				<biomassUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseInfantryScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/FirebatAttack"
+						beginFire="0.33"
+						endFire="2.6"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/FirebatDeath"
+						animationCount="2"
+						sound="Units/Terran/Firebat/tfbdth0"
+						soundCount="3"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/FirebatWalk"
+						sound="Units/Terran/FootstepsInfantry"
+						soundCount="4"/>
+			</model>	
+		</move>
+		<genericUnitAbility
+				consumedActionPoints="0" 
+				consumedMovement="0"
+				cooldown="2"
+				name="Terran/Stimpack"
+				requiredUpgrade="Terran/Stimpack">
+			<model>
+				<action sound="Actions/Terran/scr_stimpack"
+						soundCount="2"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpointsFactorFromMax add="-0.15"/>
+										<addTrait name="Terran/Stimpack" duration="2"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="Bulky"/>
+		<trait name="Terran/AblativeScales" requiredUpgrade="Terran/AblativeScales"/>
+		<trait name="ExtraInfantryArmour" requiredUpgrade="Terran/ExtraInfantryArmour"/>
+	</traits>
+</unit>

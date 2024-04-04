@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="GaussRifle" value="Винтовка Гаусса"/>
+	<entry name="GaussRifleDescription" value=""/>
+
+	<entry name="GaussPistols" value="Пистолет Гаусса"/>
+	<entry name="GaussPistolsDescription" value=""/>
+
+	<entry name="ReaperD8" value="Взрывчатка D8"/>
+	<entry name="ReaperD8Description" value="Кидковая противоструктурная взрывчатка."/>
+
+	<entry name="PunisherGrenades" value="Гранаты Каратель"/>
+	<entry name="PunisherGrenadesDescription" value=""/>
+
+	<entry name="GhostRifle" value="С-10 Винтовка"/>
+	<entry name="GhostRifleDescription" value=""/>
+
+	<entry name="GhostSnipe" value="<string name='Actions/Terran/Snipe'/>"/>
+	<entry name="GhostSnipeDescription" value="<string name='Actions/Terran/SnipeDescription'/>"/>
+
+	<entry name="CrucioPlasmaCannon" value="Спаренная Плазменная пушка"/>
+	<entry name="CrucioPlasmaCannonDescription" value=""/>
+
+	<entry name="CrucioShockCannon" value="Шоковое орудие Круцио"/>
+	<entry name="CrucioShockCannonDescription" value=""/>
+
+	<entry name="AutoGaussCannon" value="Пулемётная Автопушка"/>
+	<entry name="AutoGaussCannonDescription" value=""/>
+
+	<entry name="HellfireMissiles" value="Ракеты Адский огонь"/>
+	<entry name="HellfireMissilesDescription" value=""/>
+
+	<entry name="TyphoonMissiles" value="Ракеты Тайфун"/>
+	<entry name="TyphoonMissilesDescription" value=""/>
+
+	<entry name="TyphoonMissilesLocked" value="Система захвата Тайфун"/>
+	<entry name="TyphoonMissilesLockedDescription" value=""/>
+
+	<entry name="240mmCannon" value="240мм Орудия"/>
+	<entry name="240mmCannonDescription" value=""/>
+
+	<entry name="ThorHammer" value="Молот Тора"/>
+	<entry name="ThorHammerDescription" value=""/>
+
+	<entry name="GeminiMissiles" value="Ракеты Близнеци"/>
+	<entry name="GeminiMissilesDescription" value=""/>
+
+	<entry name="ATXLaserBattery" value="ATX Лазерная Батарея"/>
+	<entry name="ATXLaserBatteryDescription" value=""/>
+
+	<entry name="YamatoCannon" value="Орудие Ямато"/>
+	<entry name="YamatoCannonDescription" value="Разрушительное оружие стреляющее огромным сгустком плазмы."/>
+
+	<entry name="BunkerGauss" value="<string name='Weapons/GaussRifle'/>"/>
+	<entry name="BunkerGaussDescription" value="<string name='Weapons/GaussRifleDescription'/>"/>
+
+	<entry name="GalleonTorpedos" value="Воздушные Торпеды"/>
+	<entry name="GalleonTorpedosDescription" value=""/>
+
+	<entry name="LongboltMissiles" value="Длинноболтные ракеты"/>
+	<entry name="LongboltMissilesDescription" value=""/>
+
+	<entry name="EarthsplitterOrdnance" value="Земледробящий Обстрел"/>
+	<entry name="EarthsplitterOrdnanceDescription" value=""/>
+</language>

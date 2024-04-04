@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feature category="Resource" visible="0">
+	<areas>
+		<area affects="Tile" radius="1">
+			<modifiers>
+				<modifier>
+					<effects>
+						<biomass mul="0.05"/>
+						<food mul="0.1"/>
+						<requisitions mul="0.1"/>
+					</effects>
+				</modifier>
+				<modifier>
+					<conditions>
+						<player>
+							<faction name="Necrons"/>
+						</player>
+					</conditions>
+					<effects>
+						<energy mul="0.1"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</area>
+	</areas>
+	<modifiers>
+		<modifier>
+			<effects>
+				<growth mul="0.1"/>
+				<populationLimit add="2"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</feature>

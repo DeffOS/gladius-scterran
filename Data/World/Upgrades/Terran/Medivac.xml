@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<upgrade position="7" icon="Units/Terran/Medivac">
+	<requiredUpgrades>
+		<upgrade name="Terran/Aircraft"/>
+	</requiredUpgrades>
+</upgrade>

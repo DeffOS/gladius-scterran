@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/HellionDiffuse"/>
+		<texture name="Units/Terran/HellionNormal"/>
+		<texture name="Units/Terran/HellionSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

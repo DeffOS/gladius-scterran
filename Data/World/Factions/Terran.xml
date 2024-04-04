@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faction actionsTitle="GUI/TerranPlayerPowers"
+		constructSound="Actions/Terran/CityCreate"
+		buildingVariations="3"
+		playable="1"
+		walls="1"
+
+		requisitions="1"
+		startingRequisitions="50"
+
+		biomass="1"
+		startingBiomass="0"
+
+		energy="1"
+		startingEnergy="20"
+
+		influence="1"
+		startingInfluence="20"
+
+		loyalty="1"
+		research="1"
+		production="1">
+	<music>
+		<mainTrack name="Music/sc1_terran1"/>
+		<track name="Music/sc1_terran2"/>
+		<track name="Music/sc1_terran3"/>
+		<track name="Music/sc1_terran4"/>
+		<track name="Music/terransc2-01"/>
+		<track name="Music/terransc2-02"/>
+		<track name="Music/terransc2-03"/>
+		<track name="Music/terransc2-04"/>
+		<track name="Music/terransc2-05"/>
+		<track name="Music/zswarm_music_terran6"/>
+		<track name="Music/zswarm_music_terran7_action"/>
+		<track name="Music/zswarm_music_gs_terran8"/>
+		<track name="Music/zswarm_music_gs_terran9"/>
+	</music>
+	<quests>
+
+	</quests>
+	<actions>
+		<deployFortress name="Terran/DropSupply"
+				icon="Actions/DeployFortressOfRedemption"
+				cooldown="20"
+				cooldownScalesWithPace="1"
+				costScalesWithPace="1"
+				unit="Terran/SupplyDepot">
+			<model>
+				<action sound="Actions/DropPod"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="40"/>
+						<requisitionsCost base="40"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="-1">
+					<conditions>
+						<tile>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<featureCategory name="Building"/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+				</target>
+			</beginTargets>
+		</deployFortress>
+		<orbitalScan name="Terran/ScanSweep"
+				cooldown="4"
+				requiredUpgrade="Terran/ScanSweep">
+			<model>
+				<action sound="Actions/Terran/orbitalcommand_scannersweep"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="16"/>
+						<energyCost base="8"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="-1" sighted="0">
+					<areas>
+						<area affects="Tile" radius="2">
+							<modifiers>
+								<modifier>
+									<effects>
+										<reveal/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</orbitalScan>
+		<deployFortress name="Terran/DropMule"
+				icon="Units/Terran/Mule"
+				cooldown="4"
+				unit="Terran/MULE"
+				requiredUpgrade="Terran/DropMULE">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="60"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="-1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<!-- <areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<actionPoints add="1"/>
+										<addTrait duration="3" name="Summon"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas> -->
+				</target>
+			</beginTargets>
+		</deployFortress>
+	</actions>
+	<startingUnits>
+		<unit type="Terran/SCV"/>
+		<unit type="Terran/Marine" count="2"/>
+	</startingUnits>
+</faction>

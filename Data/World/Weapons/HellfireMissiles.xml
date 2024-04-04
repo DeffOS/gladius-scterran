@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<missileWeapon fireInterval="5.0"
+				fireSound="Weapons/Terran/goliath_airattack"
+				fireSoundCount="1"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="2"/>
+				<rangedArmorPenetration add="6"/>
+				<rangedDamage add="4"/>
+				<rangedAccuracy min="8"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="2"/>
+	<traits>
+		<trait name="Armourbane"/>
+		<trait name="Terran/AdvancedOptics" requiredUpgrade="Terran/AdvancedOptics"/>
+		<trait name="Terran/GoliathAresClass" requiredUpgrade="Terran/GoliathAresClass"/>
+		<trait name="TargetOnlyAir"/>
+	</traits>
+</weapon>

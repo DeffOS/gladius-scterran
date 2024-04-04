@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<building>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<productionCost base="36"/>
+				<requisitionsCost base="50"/>
+				<populationRequired base="1"/>
+				<slotsRequired base="1"/>
+				<requisitionsUpkeep add="2"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<effects>
+				<biomass add="2"/>
+				<production add="6"/>
+				<populationLimit add="1"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<productionModifiers>
+		<modifier>
+			<effects>
+				
+			</effects>
+		</modifier>
+	</productionModifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseInfantryProductionScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<produceUnit unit="Terran/Marine"/>
+		<produceUnit unit="Terran/Reaper" requiredUpgrade="Terran/Reaper"/>
+		<produceUnit unit="Terran/Firebat" requiredUpgrade="Terran/Firebat"/>
+		<produceUnit unit="Terran/Marauder" requiredUpgrade="Terran/Marauder"/>
+	</actions>
+</building>

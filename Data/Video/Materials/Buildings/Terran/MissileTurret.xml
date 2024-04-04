@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Buildings/Terran/MissileTurretDiffuse"/>
+		<texture name="Buildings/Terran/MissileTurretNormal"/>
+		<texture name="Buildings/Terran/MissileTurretSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

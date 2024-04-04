@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<projectileWeapon fireInterval="0.3"
+				fireSound="Weapons/Terran/raven_autoturretattack"
+		 		fireSoundCount="4"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="3"/>
+				<rangedArmorPenetration add="4"/>
+				<rangedDamage add="4"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="1"/>
+	<traits>
+		<trait name="BoltWeapon"/>
+		<trait name="HeavyWeapon"/>
+		<trait name="Terran/UraniumAmmo" requiredUpgrade="Terran/UraniumAmmo"/>
+	</traits>
+</weapon>

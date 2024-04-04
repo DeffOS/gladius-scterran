@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+
+	<!-- City -->
+	<entry name="Terran/Housing" value="<string name='Buildings/Terran/Housing'/>"/>
+	<entry name="Terran/HousingDescription" value="<string name='Buildings/Terran/HousingDescription'/>"/>
+	<entry name="Terran/HousingFlavor" value="<string name='Buildings/Terran/HousingFlavor'/>"/>
+
+	<entry name="Terran/Loyalty" value="<string name='Buildings/Terran/Loyalty'/>"/>
+	<entry name="Terran/LoyaltyDescription" value="<string name='Buildings/Terran/LoyaltyDescription'/>"/>
+	<entry name="Terran/LoyaltyFlavor" value="<string name='Buildings/Terran/LoyaltyFlavor'/>"/>
+
+	<entry name="Terran/Vehicles" value="<string name='Buildings/Terran/Vehicles'/>"/>
+	<entry name="Terran/VehiclesDescription" value="<string name='Buildings/Terran/VehiclesDescription'/>"/>
+	<entry name="Terran/VehiclesFlavor" value="<string name='Buildings/Terran/VehiclesFlavor'/>"/>
+
+	<entry name="Terran/Heroes" value="<string name='Buildings/Terran/Heroes'/>"/>
+	<entry name="Terran/HeroesDescription" value="<string name='Buildings/Terran/HeroesDescription'/>"/>
+	<entry name="Terran/HeroesFlavor" value="<string name='Buildings/Terran/HeroesFlavor'/>"/>
+
+	<entry name="Terran/Construction" value="<string name='Buildings/Terran/Construction'/>"/>
+	<entry name="Terran/ConstructionDescription" value="<string name='Buildings/Terran/ConstructionDescription'/>"/>
+	<entry name="Terran/ConstructionFlavor" value="<string name='Buildings/Terran/ConstructionFlavor'/>"/>
+
+	<entry name="Terran/Aircraft" value="<string name='Buildings/Terran/Aircraft'/>"/>
+	<entry name="Terran/AircraftDescription" value="<string name='Buildings/Terran/AircraftDescription'/>"/>
+	<entry name="Terran/AircraftFlavor" value="<string name='Buildings/Terran/AircraftFlavor'/>"/>
+
+	<!-- Macro -->
+	<entry name="Terran/Bunker" value="<string name='Units/Terran/Bunker'/>"/>
+	<entry name="Terran/BunkerDescription" value="<string name='Units/Terran/BunkerDescription'/>"/>
+
+	<entry name="Terran/MissileTurret" value="<string name='Units/Terran/MissileTurret'/>"/>
+	<entry name="Terran/MissileTurretDescription" value="<string name='Units/Terran/MissileTurretDescription'/>"/>
+
+	<entry name="Terran/Artillery" value="<string name='Units/Terran/Artillery'/>"/>
+	<entry name="Terran/ArtilleryDescription" value="<string name='Units/Terran/ArtilleryDescription'/>"/>
+
+	<entry name="Terran/Galleon" value="<string name='Units/Terran/Galleon'/>"/>
+	<entry name="Terran/GalleonDescription" value="<string name='Units/Terran/GalleonDescription'/>"/>
+
+	<entry name="Terran/CityTier2" value="Радиус Города 2"/>
+	<entry name="Terran/CityTier2Description" value="Увеличивает максимальный радиус города до 2."/>
+
+	<entry name="Terran/CityTier3" value="Радиус Города 3"/>
+	<entry name="Terran/CityTier3Description" value="Увеличивает максимальный радиус города до 3."/>
+
+	<entry name="Terran/ScanSweep" value="<string name='Actions/Terran/ScanSweep'/>"/>
+	<entry name="Terran/ScanSweepDescription" value="<string name='Actions/Terran/ScanSweepDescription'/>"/>
+
+	<entry name="Terran/DropMULE" value="<string name='Actions/Terran/DropMULE'/>"/>
+	<entry name="Terran/DropMULEescription" value="<string name='Actions/Terran/DropMULEescription'/>"/>
+	<!-- Units -->
+	<entry name="Terran/SCV" value="<string name='Units/Terran/SCV'/>"/>
+	<entry name="Terran/SCVDescription" value="<string name='Units/Terran/SCVDescription'/>"/>
+	<entry name="Terran/SCVFlavor" value="<string name='Units/Terran/SCVFlavor'/>"/>
+
+	<entry name="Terran/Reaper" value="<string name='Units/Terran/Reaper'/>"/>
+	<entry name="Terran/ReaperDescription" value="<string name='Units/Terran/ReaperDescription'/>"/>
+	<entry name="Terran/ReaperFlavor" value="<string name='Units/Terran/ReaperFlavor'/>"/>
+
+	<entry name="Terran/Firebat" value="<string name='Units/Terran/Firebat'/>"/>
+	<entry name="Terran/FirebatDescription" value="<string name='Units/Terran/FirebatDescription'/>"/>
+	<entry name="Terran/FirebatFlavor" value="<string name='Units/Terran/FirebatFlavor'/>"/>
+
+	<entry name="Terran/Marauder" value="<string name='Units/Terran/Marauder'/>"/>
+	<entry name="Terran/MarauderDescription" value="<string name='Units/Terran/MarauderDescription'/>"/>
+	<entry name="Terran/MarauderFlavor" value="<string name='Units/Terran/MarauderFlavor'/>"/>
+
+	<entry name="Terran/Ghost" value="<string name='Units/Terran/Ghost'/>"/>
+	<entry name="Terran/GhostDescription" value="<string name='Units/Terran/GhostDescription'/>"/>
+	<entry name="Terran/GhostFlavor" value="<string name='Units/Terran/GhostFlavor'/>"/>
+
+	<entry name="Terran/SiegeTank" value="<string name='Units/Terran/SiegeTank'/>"/>
+	<entry name="Terran/SiegeTankDescription" value="<string name='Units/Terran/SiegeTankDescription'/>"/>
+	<entry name="Terran/SiegeTankFlavor" value="<string name='Units/Terran/SiegeTankFlavor'/>"/>
+
+	<entry name="Terran/ScienceVessel" value="<string name='Units/Terran/ScienceVessel'/>"/>
+	<entry name="Terran/ScienceVesselDescription" value="<string name='Units/Terran/ScienceVesselDescription'/>"/>
+	<entry name="Terran/ScienceVesselFlavor" value="<string name='Units/Terran/ScienceVesselFlavor'/>"/>
+
+	<entry name="Terran/Goliath" value="<string name='Units/Terran/Goliath'/>"/>
+	<entry name="Terran/GoliathDescription" value="<string name='Units/Terran/GoliathDescription'/>"/>
+	<entry name="Terran/GoliathFlavor" value="<string name='Units/Terran/GoliathFlavor'/>"/>
+
+	<entry name="Terran/Cyclone" value="<string name='Units/Terran/Cyclone'/>"/>
+	<entry name="Terran/CycloneDescription" value="<string name='Units/Terran/CycloneDescription'/>"/>
+	<entry name="Terran/CycloneFlavor" value="<string name='Units/Terran/CycloneFlavor'/>"/>
+
+	<entry name="Terran/Thor" value="<string name='Units/Terran/Thor'/>"/>
+	<entry name="Terran/ThorDescription" value="<string name='Units/Terran/ThorDescription'/>"/>
+	<entry name="Terran/ThorFlavor" value="<string name='Units/Terran/ThorFlavor'/>"/>
+
+	<entry name="Terran/Medivac" value="<string name='Units/Terran/Medivac'/>"/>
+	<entry name="Terran/MedivacDescription" value="<string name='Units/Terran/MedivacDescription'/>"/>
+	<entry name="Terran/MedivacFlavor" value="<string name='Units/Terran/MedivacFlavor'/>"/>
+
+	<entry name="Terran/Raven" value="<string name='Units/Terran/Raven'/>"/>
+	<entry name="Terran/RavenDescription" value="<string name='Units/Terran/RavenDescription'/>"/>
+	<entry name="Terran/RavenFlavor" value="<string name='Units/Terran/RavenFlavor'/>"/>
+
+	<entry name="Terran/Battlecruiser" value="<string name='Units/Terran/Battlecruiser'/>"/>
+	<entry name="Terran/BattlecruiserDescription" value="<string name='Units/Terran/BattlecruiserDescription'/>"/>
+	<entry name="Terran/BattlecruiserFlavor" value="<string name='Units/Terran/BattlecruiserFlavor'/>"/>
+
+	<!--Unit Traits-->
+	<entry name="Terran/MarineShields" value="<string name='Traits/Terran/MarineShields'/>"/>
+	<entry name="Terran/MarineShieldsDescription" value="<string name='Traits/Terran/MarineShieldsDescription'/>"/>
+	<entry name="Terran/MarineShieldsFlavor" value="<string name='Traits/Terran/MarineShieldsFlavor'/>"/>
+
+	<entry name="Terran/ConcussiveShells" value="Оглушающие Гранаты"/>
+	<entry name="Terran/ConcussiveShellsDescription" value="Позволяет мародёрам замедлять противника атакой."/>
+	<entry name="Terran/ConcussiveShellsFlavor" value=""/>
+
+	<entry name="Terran/InfernalPreIgniters" value="<string name='Traits/Terran/InfernalPreIgniters'/>"/>
+	<entry name="Terran/InfernalPreIgnitersDescription" value="<string name='Traits/Terran/InfernalPreIgnitersDescription'/>"/>
+	<entry name="Terran/InfernalPreIgnitersFlavor" value="<string name='Traits/Terran/InfernalPreIgnitersFlavor'/>"/>
+
+	<entry name="Terran/GoliathAresClass" value="<string name='Traits/Terran/GoliathAresClass'/>"/>
+	<entry name="Terran/GoliathAresClassDescription" value="<string name='Traits/Terran/GoliathAresClassDescription'/>"/>
+	<entry name="Terran/GoliathAresClassFlavor" value="<string name='Traits/Terran/GoliathAresClassFlavor'/>"/>
+
+	<entry name="Terran/ExtraInfantryArmour" value="<string name='Traits/ExtraInfantryArmour'/>"/>
+	<entry name="Terran/ExtraInfantryArmourDescription" value="<string name='Traits/ExtraInfantryArmourDescription'/>"/>
+	<entry name="Terran/ExtraInfantryArmourFlavor" value=""/>
+
+	<entry name="Terran/UraniumAmmo" value="<string name='Traits/Terran/UraniumAmmo'/>"/>
+	<entry name="Terran/UraniumAmmoDescription" value="<string name='Traits/Terran/UraniumAmmoDescription'/>"/>
+	<entry name="Terran/UraniumAmmoFlavor" value="<string name='Traits/Terran/UraniumAmmoFlavor'/>"/>
+
+	<entry name="Terran/AdvancedOptics" value="<string name='Traits/Terran/AdvancedOptics'/>"/>
+	<entry name="Terran/AdvancedOpticsDescription" value="<string name='Traits/Terran/AdvancedOpticsDescription'/>"/>
+	<entry name="Terran/AdvancedOpticsFlavor" value="<string name='Traits/Terran/AdvancedOpticsFlavor'/>"/>
+
+	<entry name="Terran/ExtraVehicleArmour" value="<string name='Traits/ExtraVehicleArmour'/>"/>
+	<entry name="Terran/ExtraVehicleArmourDescription" value="<string name='Traits/ExtraVehicleArmourDescription'/>"/>
+	<entry name="Terran/ExtraVehicleArmourFlavor" value=""/>
+
+	<entry name="Terran/Biosteel" value="<string name='Traits/Terran/Biosteel'/>"/>
+	<entry name="Terran/BiosteelDescription" value="<string name='Traits/Terran/BiosteelDescription'/>"/>
+	<entry name="Terran/BiosteelFlavor" value="<string name='Traits/Terran/BiosteelFlavor'/>"/>
+
+	<entry name="Terran/DisplacementField" value="<string name='Traits/Terran/DisplacementField'/>"/>
+	<entry name="Terran/DisplacementFieldDescription" value="<string name='Traits/Terran/DisplacementFieldDescription'/>"/>
+	<entry name="Terran/DisplacementFieldFlavor" value="<string name='Traits/Terran/DisplacementFieldFlavor'/>"/>
+
+	<entry name="Terran/ExtraStructureArmour" value="<string name='Traits/ExtraStructureArmour'/>"/>
+	<entry name="Terran/ExtraStructureArmourDescription" value="<string name='Traits/ExtraStructureArmourDescription'/>"/>
+
+	<entry name="Terran/FireSuppression" value="<string name='Traits/Terran/FireSuppression'/>"/>
+	<entry name="Terran/FireSuppressionDescription" value="<string name='Traits/Terran/FireSuppressionDescription'/>"/>
+	<entry name="Terran/FireSuppressionFlavor" value="<string name='Traits/Terran/FireSuppressionFlavor'/>"/>
+
+	<!--Unit Abilities-->
+	<entry name="Terran/Stimpack" value="<string name='Actions/Terran/Stimpack'/>"/>
+	<entry name="Terran/StimpackDescription" value="<string name='Actions/Terran/StimpackDescription'/>"/>
+	<entry name="Terran/StimpackFlavor" value="<string name='Actions/Terran/StimpackFlavor'/>"/>
+
+	<entry name="Terran/MedivacAfterburn" value="<string name='Actions/Terran/MedivacAfterburn'/>"/>
+	<entry name="Terran/MedivacAfterburnDescription" value="<string name='Actions/Terran/MedivacAfterburnDescription'/>"/>
+	<entry name="Terran/MedivacAfterburnFlavor" value="<string name='Actions/Terran/MedivacAfterburnFlavor'/>"/>
+
+	<entry name="Terran/RavenMatrix" value="<string name='Actions/Terran/InterferenceMatrix'/>"/>
+	<entry name="Terran/RavenMatrixDescription" value="<string name='Actions/Terran/InterferenceMatrixDescription'/>"/>
+	<entry name="Terran/RavenMatrixFlavor" value="<string name='Actions/Terran/InterferenceMatrixFlavor'/>"/>
+
+	<entry name="Terran/ReaperD8" value="<string name='Weapons/ReaperD8'/>"/>
+	<entry name="Terran/ReaperD8Description" value="<string name='Weapons/ReaperD8Description'/>"/>
+	<entry name="Terran/ReaperD8Flavor" value="<string name='Weapons/ReaperD8Flavor'/>"/>
+
+	<entry name="Terran/Thor240mm" value="<string name='Weapons/240mmCannon'/>"/>
+	<entry name="Terran/Thor240mmDescription" value="<string name='Weapons/240mmCannonDescription'/>"/>
+	<entry name="Terran/Thor240mmFlavor" value="<string name='Weapons/240mmCannonFlavor'/>"/>
+
+	<entry name="Terran/BattlecruiserYamato" value="<string name='Weapons/YamatoCannon'/>"/>
+	<entry name="Terran/BattlecruiserYamatoDescription" value="<string name='Weapons/YamatoCannonDescription'/>"/>
+	<entry name="Terran/BattlecruiserYamatoFlavor" value="<string name='Weapons/YamatoCannonFlavor'/>"/>
+</language>

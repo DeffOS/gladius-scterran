@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/ScienceVessel"
+				material="Units/Terran/ScienceVessel"
+				idleAnimation="Units/Terran/ScienceVesselIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				position="0 0 112"
+				scale="1.6 1.6 1.6"
+				explosionsBone="Unit_Terran_SceinceVessel_Main"/>
+	</model>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="35.0"/>
+				<itemSlots base="6"/>
+				<levelMax base="9"/>
+				<moraleMax base="16"/>
+				<movementMax base="6"/>
+
+				<productionCost base="48.0"/>
+				<influenceCost base="128.0"/>
+				<requisitionsCost base="128.0"/>
+				<biomassCost base="96.0"/>
+				<influenceUpkeep base="6.0"/>
+				<energyUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseHeroesScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/ScienceVesselIdle"
+						sound="Units/Terran/VehicleBigExplode"
+						soundCount="10"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/ScienceVesselWalk"/>
+			</model>		
+		</move>
+		<genericUnitAbility name="Terran/Nanites"
+				rank="-1"
+				rankMax="2"
+				cooldown="1">
+			<model>
+				<action animation="Units/Terran/ScienceVesselIdle"
+						sound="Actions/Terran/sciencevessel_emp"/>
+			</model>
+			<beginTargets>
+				<target rangeMin="1" rangeMax="2">
+					<conditions>
+						<unit>
+							<allied/>
+							<damaged/>
+						</unit>
+						<unit match="Any">
+							<faction name="AdeptusMechanicus"/>
+							<trait name="Fortification"/>
+							<trait name="Vehicle"/>
+							<trait name="Necrons/ReanimationProtocols"/>
+							<trait name="Necrons/LivingMetal"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpoints addMin="5" addMax="11"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/Irradiate"
+				cooldown="6"
+				rank="-1"
+				rankMax="2">
+			<model>
+				<action animation="Units/Terran/ScienceVesselIdle"
+						sound="Actions/Terran/sciencevessel_irradiate"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<enemy/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait durationMin="1" durationMax="3" name="Terran/Irradiated"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/FieldResearch"
+				passive="1"
+				rank="-1"
+				rankMax="2">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Terran/FieldResearch"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/Shield"
+				elite="1"
+				rank="-1"
+				rankMax="0"
+				cooldown="6">
+			<model>
+				<action animation="Units/Terran/ScienceVesselIdle"
+						sound="Actions/Terran/sciencevessel_defencematrix"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<allied/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="3" name="Terran/Shield"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<levelUp/>
+		<shop/>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Hero"/>
+		<trait name="Vehicle"/>
+		<trait name="Flyer"/>
+	</traits>
+</unit>

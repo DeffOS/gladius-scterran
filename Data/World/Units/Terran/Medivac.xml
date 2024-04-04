@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Medivac"
+				material="Units/Terran/Medivac"
+				idleAnimation="Units/Terran/MedivacIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				position="0 0 96"
+				scale="1.4 1.4 1.4"
+				explosionsBone="Unit_Terran_Dropshipx"/>
+	</model>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<actionPointsMax base="1"/>
+				<hitpointsMax base="30"/>
+				<cargoSlots base="6"/>
+				<moraleMax base="14"/>
+				<movementMax base="4"/>
+
+				<productionCost base="32.0"/>
+				<requisitionsCost base="64.0"/>
+				<biomassCost base="32.0"/>
+				<energyUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseAircraftScore base="1.0"/>
+				<increaseSupportScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/MedivacIdle"
+						sound="Units/Terran/VehicleBigExplode"
+						soundCount="10"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/MedivacWalk"
+						sound="Units/Terran/Medivac/medivac_movement"
+						soundCount="6"/>
+			</model>		
+		</move>
+		<genericUnitAbility
+				name="Terran/Heal">
+			<model>
+				<action animation="Units/Terran/MedivacIdle"
+						sound="Actions/Terran/medivac_heal"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<unit>
+							<allied/>
+							<damaged/>
+							<noFaction name="AdeptusMechanicus"/>
+							<noFaction name="Necrons"/>
+							<noTrait name="Fortification"/>
+							<noTrait name="Vehicle"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpoints add="10.0"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/Afterburner"
+			consumedActionPoints="0" 
+			consumedMovement="0"
+			cooldown="4"
+			requiredUpgrade="Terran/MedivacAfterburn">
+			<model>
+				<action animation="Units/Terran/MedivacIdle"
+						sound="Actions/Terran/medivac_afterburneron"
+						soundCount="6"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Terran/Afterburner" duration="2"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Vehicle"/>
+		<trait name="Flyer"/>
+		<trait name="Transport"/>
+	</traits>
+</unit>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Raven"
+				material="Units/Terran/Raven"
+				idleAnimation="Units/Terran/RavenIdle"
+				idleAnimationCount="5"
+				idleContinuously="1"
+				normalWeight="0.1"
+				position="0 0 96"
+				scale="1.2 1.2 1.2"
+				explosionsBone="Unit_Terran_Nomad_01"/>
+	</model>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="6"/>
+				<hitpointsMax base="18.0"/>
+				<moraleMax base="10"/>
+				<movementMax base="5"/>
+
+				<productionCost base="64.0"/>
+				<requisitionsCost base="64.0"/>
+				<biomassCost base="48.0"/>
+				<energyUpkeep base="4.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseAircraftScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/RavenIdle0"
+						sound="Units/Terran/VehicleBigExplode"
+						soundCount="10"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/RavenWalk"
+						sound="Units/Terran/Raven/raven_movement0"
+						soundCount="3"/>
+			</model>		
+		</move>
+		<genericUnitAbility name="Terran/DeployTurret"
+			cooldown="5">
+			<model>
+				<action animation="Units/Terran/RavenSpell"
+						sound="Actions/Terran/raven_autoturret_releaseimpact"
+						soundCount="3"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<tile>
+							<!--noFeatureCategory name="Resource"/-->
+							<!--noFeatureCategory name="WireWeed"/-->
+							<land/>
+							<!--noEnemyCity/-->
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Autoturret" consumedAction="0" consumedMovement="0"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="3" name="Summon"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/InterferenceMatrix"
+			cooldown="5">
+			<model>
+				<action animation="Units/Terran/RavenSpell"
+						sound="Actions/Terran/def_matrix_birth"
+						soundCount="4"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<enemy/>
+							<noTrait name="Fortification"/>
+							<noTrait name="Headquarters"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/InterferenceMatrix"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/AntiArmor"
+			cooldown="5">
+			<model>
+				<action animation="Units/Terran/RavenSpell"
+						sound="Actions/Terran/raven_hunterseekerlaunch"
+						soundCount="2"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<enemy/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="3" name="Terran/AntiArmor"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Vehicle"/>
+		<trait name="Flyer"/>
+		<trait name="Terran/AI"/>
+	</traits>
+</unit>

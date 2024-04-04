@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/ResourceBonus/Energy"
+		category="Buff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<energy add="4"/>
+			</effects>
+		</modifier>
+		<modifier visible="1">
+			<conditions>
+				<tile match="Any">
+					<feature name="River"/>
+					<feature name="Coast"/>
+				</tile>
+			</conditions>
+			<effects>
+				<energy add="4"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>
+

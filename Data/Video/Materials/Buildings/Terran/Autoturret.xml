@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Buildings/Terran/AutoturretDiffuse"/>
+		<texture name="Buildings/Terran/AutoturretNormal"/>
+		<texture name="Buildings/Terran/AutoturretSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

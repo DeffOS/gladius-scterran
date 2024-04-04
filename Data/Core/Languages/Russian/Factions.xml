@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Terran" value="Терраны"/>
+	<entry name="TerranProperties" value="&lt;style name='Title'/&gt;Терранский Доминион&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Сложность игры за фракцию:&lt;style name='Default'/&gt; &lt;style color='GUI/Blue'/&gt;Удачного вам макро&lt;style color='Default'/&gt;&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Защитные структуры:&lt;style name='Default'/&gt; Укрепляйте ваш периметр противовоздушными Ракетными турелями, а фронты окопными Бункерами для пехоты.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Мастера осады:&lt;style name='Default'/&gt; В вашем распоряжении широкий арсенал дальнобойного и разрушительного вооружения - от Осадных танков и Артилерийских структур, до Призраков указывающих Ядерные удары.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Полевые производство:&lt;style name='Default'/&gt; Имея больший штраф к лояльности и населению от новых городов Терраны могут добывать ресурсы и производить войска через структуры построенные на мировой карте.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Веспен газ:&lt;style name='Default'/&gt; Данный газ используемый для производства более технологичных войск, который может быть синтезирован в городе или на полевых переработчиках.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Коммандый центр:&lt;style name='Default'/&gt; Города могут посылать временного дрона на поле боя для починки механических войск, увеличивать население городов хранилищами, а также производить орбитальное сканирование местности.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Специалисты:&lt;style name='Default'/&gt; Большая часть юнитов заточена на ведение не лобового боя либо подержку дружественных войск.&lt;br/&gt;&lt;icon texture='GUI/Bullet'/&gt;&lt;style name='Bold'/&gt;Механические гиганты:&lt;style name='Default'/&gt; Терраны владеют мощным мехом Тор способный стереть цель обстрелом из 240мм орудий, а также небестной крепостью Крейсером, контролирующим поле боя из орбиты."/>
+	<entry name="TerranShortFlavor" value="Терранский Доминион является оплотом человечества в Секторе Капрулу, но по незвестной причине оказавшись среди столь инородного и враждебного мира они должны отстоять своё право существования на Гладиус Прайм."/>
+
+
+	<!-- Рот Ебал это на серьёзных щях расписывать-->
+
+	<entry name="TerranDefeatedTerran" 
+		value="Выживает сильнейший."/>
+	<entry name="TerranDiscoveredTerran" 
+		value="Походу мы здесь не одни."/>
+
+	<entry name="TerranDefeatedAdeptusMechanicus" 
+		value="ВРЕМЯ ПИЛИТЬ НА ЦВЕТМЕТ"/>
+	<entry name="TerranDefeatedAstraMilitarum" 
+		value="ХОРОШО СМЕЁТСЯ ТОТ У КОГО БОЛЬШАЯ ПУШКА"/>
+	<entry name="TerranDefeatedChaosSpaceMarines" 
+		value="ЭКЗОТЦИЗМ ПРОВЕДЁН УСПЕШНО"/>
+	<entry name="TerranDefeatedDrukhari" 
+		value="ЗАСМЕЯНЫ ДОСМЕРТИ"/>
+	<entry name="TerranDefeatedEldar" 
+		value="ЛАМПОЧКА ПЕРЕГОРЕЛА"/>
+	<entry name="TerranDefeatedNecrons" 
+		value="ЛОПАТЫ ВЗЯЛИ? ИДЁМ НА ПОХОРОНЫ"/>
+	<entry name="TerranDefeatedOrks" 
+		value="ЗЕЛЁНЫЙ БЫЛ УСПЕШНО ПУЩЕН НА СУП"/>
+	<entry name="TerranDefeatedSistersOfBattle" 
+		value="БАБАМ НЕТ"/>
+	<entry name="TerranDefeatedSpaceMarines" 
+		value="НЕДОКРАСИЛИ СОЛДАТИКОВ"/>
+	<entry name="TerranDefeatedTau" 
+		value="ЧТО, ВЫСШЕЕ БЛАГО КУПИТЬ НЕ СМОГЛИ?"/>
+	<entry name="TerranDefeatedTyranids" 
+		value="ШАШЛЫК ИЗ ЗЕРГА!"/>
+
+	<entry name="TerranDiscoveredAdeptusMechanicus" value=""/>
+	<entry name="TerranDiscoveredAstraMilitarum" value=""/>
+	<entry name="TerranDiscoveredChaosSpaceMarines" value=""/>
+	<entry name="TerranDiscoveredDrukhari" value=""/>
+	<entry name="TerranDiscoveredEldar" value=""/>
+	<entry name="TerranDiscoveredNecrons" value=""/>
+	<entry name="TerranDiscoveredOrks" value=""/>
+	<entry name="TerranDiscoveredSistersOfBattle" value=""/>
+	<entry name="TerranDiscoveredSpaceMarines" value=""/>
+	<entry name="TerranDiscoveredTau" value=""/>
+	<entry name="TerranDiscoveredTyranids" value=""/>
+
+	<entry name="AdeptusMechanicusDefeatedTerran" value=""/>
+	<entry name="AstraMilitarumDefeatedTerran" value=""/>
+	<entry name="ChaosSpaceMarinesDefeatedTerran" value=""/>
+	<entry name="DrukhariDefeatedTerran" value=""/>
+	<entry name="EldarDefeatedTerran" value=""/>
+	<entry name="NecronsDefeatedTerran" value=""/>
+	<entry name="OrksDefeatedTerran" value=""/>
+	<entry name="SistersOfBattleDefeatedTerran" value=""/>
+	<entry name="SpaceMarinesDefeatedTerran" value=""/>
+	<entry name="TauDefeatedTerran" value=""/>
+	<entry name="TyranidsDefeatedTerran" value=""/>
+
+	<entry name="AdeptusMechanicusDiscoveredTerran" value=""/>
+	<entry name="AstraMilitarumDiscoveredTerran" value=""/>
+	<entry name="ChaosSpaceMarinesDiscoveredTerran" value=""/>
+	<entry name="DrukhariDiscoveredTerran" value=""/>
+	<entry name="EldarDiscoveredTerran" value=""/>
+	<entry name="NecronsDiscoveredTerran" value=""/>
+	<entry name="OrksDiscoveredTerran" value=""/>
+	<entry name="SistersOfBattleDiscoveredTerran" value=""/>
+	<entry name="SpaceMarinesDiscoveredTerran" value=""/>
+	<entry name="TauDiscoveredTerran" value=""/>
+	<entry name="TyranidsDiscoveredTerran" value=""/>
+</language>

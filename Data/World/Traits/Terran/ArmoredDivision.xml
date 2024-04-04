@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/ArmoredDivision"
+		category="Buff"
+		rankMax="2">
+	<modifiers>
+		<modifier>
+			<conditions>
+				<unit>
+					<allied/>
+					<noTrait name="Flyer"/>
+					<trait name="Vehicle"/>
+				</unit>
+			</conditions>
+			<effects>
+				<armor addMin="1" addMax="3"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/ResourceBonus/Vespeen"
+		category="Buff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<biomass add="4"/>
+			</effects>
+		</modifier>
+		<modifier visible="1">
+			<conditions>
+				<tile match="Any">
+					<feature name="Forest"/>
+					<feature name="OrkoidFungus"/>
+				</tile>
+			</conditions>
+			<effects>
+				<biomass add="4"/>
+			</effects>
+		</modifier>
+		
+	</modifiers>
+</trait>
+

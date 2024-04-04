@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/FirebatDiffuse"/>
+		<texture name="Units/Terran/FirebatNormal"/>
+		<texture name="Units/Terran/FirebatSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

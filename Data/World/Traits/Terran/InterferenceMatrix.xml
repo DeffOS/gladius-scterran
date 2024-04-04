@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/InterferenceMatrix"
+		category="Debuff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<actionPointsMax max="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

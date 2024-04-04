@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/ThorDiffuse"/>
+		<texture name="Units/Terran/ThorNormal"/>
+		<texture name="Units/Terran/ThorSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

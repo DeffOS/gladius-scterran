@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/MarineDiffuse"/>
+		<texture name="Units/Terran/MarineNormal"/>
+		<texture name="Units/Terran/MarineSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

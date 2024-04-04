@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait visible="0">
+	<!--Flatpack units to disallow fat ones to control multiple guns-->
+	<onUnitEmbarked>
+		<area affects="Unit">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<addTrait name="Terran/BunkerFlatpacked"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</area>
+	</onUnitEmbarked>
+	<onUnitDisembarked>
+		<area affects="Unit">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<removeTrait name="Terran/BunkerFlatpacked"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</area>
+	</onUnitDisembarked>
+	<!--Dumb but efficient-->
+	<modifiers>
+		<modifier>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="2"/>
+				</unit>
+			</conditions>
+			<effects>
+				<attacks mul="1"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="3"/>
+				</unit>
+			</conditions>
+			<effects>
+				<attacks mul="2"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="4"/>
+				</unit>
+			</conditions>
+			<effects>
+				<attacks mul="3"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="5"/>
+				</unit>
+			</conditions>
+			<effects>
+				<attacks mul="4"/>
+			</effects>
+		</modifier>
+		<modifier>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="6"/>
+				</unit>
+			</conditions>
+			<effects>
+				<attacks mul="5"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

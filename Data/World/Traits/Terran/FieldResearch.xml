@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/FieldResearch"
+		alwaysVisible="1"
+		category="Buff"
+		rankMax="2">
+	<modifiers>
+		<modifier>
+			<effects>
+				<research addMin="8" addMax="16"/>
+				<researchPerExperience addMin="8" addMax="16"/>
+				<influencePerExperience addMin="4" addMax="8"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+			<!--NOTE: I cant make its iconic rotation because attack doesnt even stop it, so its firing rockets while rotating like deathrun merry-go-round
+				idleAnimation="Buildings/Terran/MissileTurretIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"-->
+		<structureUnit mesh="Buildings/Terran/MissileTurret"
+				material="Buildings/Terran/MissileTurret"
+				idleAnimation=""
+				idleAnimationCount="0"
+				heatImpactSound="Impacts/HeatConcrete"
+				heatImpactSoundCount="4"
+				kineticImpactSound="Impacts/KineticConcrete"
+				kineticImpactSoundCount="5"
+				scale="1.5 1.5 1.5"
+				explosionsBone="Bldg_Terran_MissileTurret_Base"
+				uvAnimated="0"
+				portraitFocusHeightModifier="32"/>
+	</model>
+	<weapons>
+		<weapon name="LongboltMissiles" count="2">
+			<model>
+				<projectileWeapon
+						mesh="Buildings/Terran/MissileTurretHead"
+						material="Buildings/Terran/MissileTurret"
+						bone="TurretZ"
+						muzzleBone="Muzzle"
+						muzzleCount="4"
+						cycleMuzzles="1"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="24.0"/>
+				<moraleMax base="16"/>
+				<movementMax max="0"/>
+				<rangedAccuracy min="10" max="12"/>
+
+				<productionCost base="36.0"/>
+				<requisitionsCost base="64.0"/>
+				<requisitionsUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action beginFire="0.15" endFire="1.2"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+		<genericUnitAbility name="Terran/Deconstruct"
+				requiredActionPoints="1"
+				consumedActionPoints="1"
+				costScalesWithPace="1"
+				cooldown="1">
+			<model>
+				<action sound="Actions/Terran/terran_constructionend"
+					soundCount="1"/>
+			</model>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="0"/>
+				</unit>
+			</conditions>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="-24.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/Deconstruction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="Fortification"/>
+	</traits>
+</unit>

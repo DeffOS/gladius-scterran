@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<structureUnit mesh="Buildings/Terran/Bunker"
+				material="Buildings/Terran/Bunker"
+				idleAnimation=""
+				idleAnimationCount="0"
+				heatImpactSound="Impacts/HeatArmored"
+				heatImpactSoundCount="4"
+				kineticImpactSound="Impacts/KineticArmored"
+				kineticImpactSoundCount="5"
+				scale="1.0 1.0 1.5"
+				explosionsBone="Bone_Link_Object"
+				uvAnimated="0"/>
+	</model>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="6"/>
+				<hitpointsMax base="18.0"/>
+				<moraleMax base="0"/>
+				<movementMax max="0"/>
+				<actionPointsMax max="0"/>
+
+				<influenceUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<die>
+			<model>
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+		<genericUnitAbility passive="1" visible="0">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addFeature name="SupplyDepot"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="FeatureLink/SupplyDepot"/>
+		<trait name="Fortification"/>
+	</traits>
+</unit>

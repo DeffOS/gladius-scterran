@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<structureUnit mesh="Buildings/Terran/Autoturret"
+				material="Buildings/Terran/Autoturret"
+				idleAnimation=""
+				idleAnimationCount="0"
+				heatImpactSound="Impacts/HeatConcrete"
+				heatImpactSoundCount="4"
+				kineticImpactSound="Impacts/KineticConcrete"
+				kineticImpactSoundCount="5"
+				scale="1.3 1.3 1.3"
+				explosionsBone="Base"
+				uvAnimated="0"
+				portraitFocusHeightModifier="16"/>
+	</model>
+	<weapons>
+		<weapon name="AutoTurretCannon">
+			<model>
+				<projectileWeapon
+						mesh="Buildings/Terran/AutoturretHead"
+						material="Buildings/Terran/Autoturret"
+						bone="TurretZ"
+						muzzleBone="Muzzle"
+						muzzleCount="1"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="20.0"/>
+				<moraleMax base="10"/>
+				<movementMax max="0"/>
+
+				<productionCost base="36.0"/>
+				<requisitionsCost base="28.0"/>
+				<requisitionsUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<!--NOTE: Turret head rotation is not compatible with animations. Fucking great.-->
+				<!--action animation="Buildings/Terran/AutoturretAttack"/-->
+				<action beginFire="0.15" endFire="1.2"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<!--animation="Buildings/Terran/AutoturretDeath"-->
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="Fortification"/>
+		<trait name="Terran/AI"/>
+	</traits>
+</unit>

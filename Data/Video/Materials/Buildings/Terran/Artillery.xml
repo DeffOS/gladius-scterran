@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Buildings/Terran/ArtilleryDiffuse"/>
+		<texture name="Buildings/Terran/ArtilleryNormal"/>
+		<texture name="Buildings/Terran/ArtillerySIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<!--Infantry-->
+	<entry name="Terran/Marine" value="Морпех"/>
+	<entry name="Terran/MarineDescription" value="Пехота общего назначения."/>
+	<entry name="Terran/MarineFlavor" value=""/>
+
+	<entry name="Terran/Reaper" value="Головорез"/>
+	<entry name="Terran/ReaperDescription" value="Пехота разведки, может подниматься по склонам и использовать противоструктурные гранаты."/>
+	<entry name="Terran/ReaperFlavor" value=""/>
+
+	<entry name="Terran/Firebat" value="Огнемётчики"/>
+	<entry name="Terran/FirebatDescription" value="Тяжёлая пехота ближнего боя оснащённая огнемётами."/>
+	<entry name="Terran/FirebatFlavor" value=""/>
+
+	<entry name="Terran/Marauder" value="Мародёр"/>
+	<entry name="Terran/MarauderDescription" value="Тяжёлая противотанковая пехота оснащённая замедляющими гранатами."/>
+	<entry name="Terran/MarauderFlavor" value=""/>
+
+	<!--Heroes-->
+	<entry name="Terran/Ghost" value="Призрак"/>
+	<entry name="Terran/GhostDescription" value="Герой псион специализируйщийся на разведке и убийстве единичных угроз, может вызывать Ядерный удар."/>
+	<entry name="Terran/GhostFlavor" value=""/>
+
+	<entry name="Terran/SiegeTank" value="Осадный Танк"/>
+	<entry name="Terran/SiegeTankDescription" value="Герой танк специализируйщийся на артилерийском огне, не может двигаться в режиме осады."/>
+	<entry name="Terran/SiegeTankFlavor" value=""/>
+
+	<entry name="Terran/ScienceVessel" value="Научное Судно"/>
+	<entry name="Terran/ScienceVesselDescription" value="Летающий герой специализирующийся на поддержке фронтовых войск."/>
+	<entry name="Terran/ScienceVesselFlavor" value=""/>
+
+	<!--Vehicles-->
+	<entry name="Terran/Hellion" value="Геллион"/>
+	<entry name="Terran/HellionDescription" value="Лёгкая техника разведки оснащённая огнемётами."/>
+	<entry name="Terran/HellionFlavor" value=""/>
+
+	<entry name="Terran/Goliath" value="Голиаф"/>
+	<entry name="Terran/GoliathDescription" value="Шагоход оснащённый пулемётами и противовоздушными ракетами."/>
+	<entry name="Terran/GoliathFlavor" value=""/>
+
+	<entry name="Terran/Cyclone" value="Циклон"/>
+	<entry name="Terran/CycloneDescription" value="Техника специализирующаяся на выцепливании противника из далека."/>
+	<entry name="Terran/CycloneFlavor" value=""/>
+
+	<entry name="Terran/Thor" value="Тор"/>
+	<entry name="Terran/ThorDescription" value="Огромный шагоход имеющий внушительную аттаку как по воздушным так и по наземным единицам."/>
+	<entry name="Terran/ThorFlavor" value=""/>
+
+	<!--Aircraft-->
+	<entry name="Terran/Wraith" value="Мираж"/>
+	<entry name="Terran/WraithDescription" value="Манёвренный противовоздушный истребитель оснащённый ракетами."/>
+	<entry name="Terran/WraithFlavor" value=""/>
+
+	<entry name="Terran/Medivac" value="Медэвак"/>
+	<entry name="Terran/MedivacDescription" value="Воздушный транспорт с возможностью лечения органической пехоты."/>
+	<entry name="Terran/MedivacFlavor" value=""/>
+
+	<entry name="Terran/Raven" value="Ворон"/>
+	<entry name="Terran/RavenDescription" value="Воздушный дрон поддержки способный устанавливать временные турели и саботировать атаку противника."/>
+	<entry name="Terran/RavenFlavor" value=""/>
+
+	<entry name="Terran/Battlecruiser" value="Крейсер"/>
+	<entry name="Terran/BattlecruiserDescription" value="Тяжелобронированная летающая крепость оснащённая плазменными батареями и способная телепортироваться на короткие растояния."/>
+	<entry name="Terran/BattlecruiserFlavor" value=""/>
+
+	<!--Buildings/Macro-->
+	<entry name="Terran/SCV" value="КСМ"/>
+	<entry name="Terran/SCVDescription" value="Мех строитель способный чинить и очищать клетки."/>
+	<entry name="Terran/SCVFlavor" value=""/>
+
+	<entry name="Terran/MULE" value="М.У.Л."/>
+	<entry name="Terran/MULEDescription" value="Временный дрон поддержки способный чинить технику и очищать клетки."/>
+	<entry name="Terran/MULEFlavor" value=""/>
+
+	<entry name="Terran/SupplyDepot" value="Хранилище"/>
+	<entry name="Terran/SupplyDepotDescription" value="Экономическое сооружение города увеличивающее рост населения и в малой стерепи добычу ресурсов."/>
+	<entry name="Terran/SupplyDepotFlavor" value=""/>
+
+	<entry name="Terran/Headquarters" value="Городской дворец"/>
+	<entry name="Terran/HeadquartersDescription" value="Главная постройка города Терранов."/>
+	<entry name="Terran/HeadquartersFlavor" value=""/>
+
+	<entry name="Terran/Bunker" value="Бункер"/>
+	<entry name="Terran/BunkerDescription" value="Оборонное сооружение с пилотируемыми орудиями."/>
+	<entry name="Terran/BunkerFlavor" value=""/>
+
+	<entry name="Terran/Autoturret" value="Автотурель"/>
+	<entry name="Terran/AutoturretDescription" value="Временное боевое сооружение."/>
+	<entry name="Terran/AutoturretFlavor" value=""/>
+
+	<entry name="Terran/MissileTurret" value="Ракетная турель"/>
+	<entry name="Terran/MissileTurretDescription" value="Противовоздушное защитное сооружение."/>
+	<entry name="Terran/MissileTurretFlavor" value=""/>
+
+	<entry name="Terran/Artillery" value="Артиллерийская установка"/>
+	<entry name="Terran/ArtilleryDescription" value="Особо дальнабольная гаубица стреляющая разрывными снарядами по наземным целям. Имея экипаж в гарнизоне быстрее перезаряжается."/>
+	<entry name="Terran/ArtilleryFlavor" value=""/>
+
+	<entry name="Terran/Refinery" value="Переработчик газа"/>
+	<entry name="Terran/RefineryDescription" value="Экономическая структура Терранов производящая биомассу."/>
+	<entry name="Terran/RefineryFlavor" value=""/>
+
+	<entry name="Terran/Generator" value="Генератор"/>
+	<entry name="Terran/GeneratorDescription" value="Экономическая структура Терранов производящая энергию."/>
+	<entry name="Terran/GeneratorFlavor" value=""/>
+
+	<entry name="Terran/Oremine" value="Рудная шахта"/>
+	<entry name="Terran/OremineDescription" value="Экономическая структура Терранов производящая руду."/>
+	<entry name="Terran/OremineFlavor" value=""/>
+
+	<entry name="Terran/Galleon" value="Галлеон"/>
+	<entry name="Terran/GalleonDescription" value="Мобильная структура Терранов производящая войска на поле боя."/>
+	<entry name="Terran/GalleonFlavor" value=""/>
+
+
+
+	<!--What are you looking at?-->
+	<entry name="Terran/Hercules" value="Геркулес"/>
+	<entry name="Terran/HerculesDescription" value="Тяжелобронированный транспорт с огромной грузоподьёмностью."/>
+	<entry name="Terran/HerculesFlavor" value=""/>
+
+	<entry name="Terran/Odin" value="Один"/>
+	<entry name="Terran/OdinDescription" value="Огромный шагоход терранов с разрушительным вооружением."/>
+	<entry name="Terran/OdinFlavor" value=""/>
+</language>

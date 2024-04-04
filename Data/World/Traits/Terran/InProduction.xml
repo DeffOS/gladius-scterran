@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait category="Debuff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<movementMax max="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<onTraitRemovedModifiers>
+		<modifier visible="0">
+			<effects>
+				<movement add="2"/>
+			</effects>
+		</modifier>
+	</onTraitRemovedModifiers>
+</trait>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<projectileWeapon 
+				fireSound="Weapons/Terran/battlecruiser_scr_yamatofastlaunch"
+				fireSoundCount="1"
+				explosionSound="Explosions/Terran/terran_explosionmedium"
+				explosionSoundCount="10"
+
+				explosionsBlueprint="Effects/LightExplosions"
+				explosionsEmitterBlueprint="Effects/NecronExplosionsEmitter"
+				muzzleFlashesBlueprint="Effects/PhosphorMuzzleFlashes"
+				directionalMuzzleFlashesBlueprint=""
+				projectilesBlueprint="Effects/PhosphorProjectiles"
+				projectilesEmitterBlueprint="Effects/PhosphorProjectilesEmitter"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="1"/>
+				<rangedArmorPenetration add="12"/>
+				<rangedDamage add="32.0"/>
+				<rangedAccuracy min="12"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="3"/>
+	<traits>
+		<trait name="Luminagen"/>
+		<trait name="IgnoresCover"/>
+		<trait name="NoEscape"/>
+	</traits>
+</weapon>

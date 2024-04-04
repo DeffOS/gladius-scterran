@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/SCV"
+				material="Units/Terran/SCV"
+				scale="1.0 1.0 0.1"
+				idleAnimation="Units/Terran/SCVIdle"
+				idleAnimationCount="5"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="Bone_Spine"
+				walker="1"/>
+	</model>
+	<weapons>
+
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="5"/>
+				<hitpointsMax base="16.0"/>
+				<moraleMax base="10"/>
+				<movementMax base="3"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseSupportScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Units/Terran/VehicleExplode"
+						soundCount="6"
+						soundDelay="0.15"
+						voiceSound="Units/Terran/SCV/Voice/SCVDeath"
+						voiceSoundCount="10"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Terran/SCVWalk"
+						sound="Units/Terran/SCV/SCVMove"
+						soundCount="1"/>
+			</model>		
+		</move>
+
+		<clearTileUnitAbility cooldown="1"
+				icon="Actions/ClearTile"
+				name="ClearTile">
+			<model>
+				<action animation="Units/Terran/SCVWork"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions/>
+					<areas/>
+				</target>
+			</beginTargets>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="5"/>
+						<requisitionsCost base="5"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</clearTileUnitAbility>
+		<genericUnitAbility name="Terran/RepairMech"
+				cooldown="1">
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Heal"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="4.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMin="1" rangeMax="1">
+					<conditions>
+						<unit>
+							<allied/>
+							<damaged/>
+						</unit>
+						<unit match="Any">
+							<type name="Terran/SCV"/>
+							<trait name="Fortification"/>
+							<trait name="Vehicle"/>
+							<trait name="Tank"/>
+							<trait name="Walker"/>
+							<trait name="Necrons/LivingMetal"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpoints add="12.0"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraInfantryArmour" requiredUpgrade="Terran/ExtraInfantryArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Terran/AI"/>
+		<trait name="Vehicle"/>
+		<trait name="JetPack"/>
+		<trait name="Summon" duration="3"/>
+	</traits>
+</unit>

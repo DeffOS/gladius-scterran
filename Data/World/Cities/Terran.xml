@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<city>
+	<modifiers>
+		<modifier>
+			<effects>
+				<influencePerTile base="-0.7"/>
+				<loyaltyPerCity base="-8"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</city>

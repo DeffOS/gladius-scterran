@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Cyclone"
+				material="Units/Terran/Cyclone"
+				idleAnimation="Units/Terran/CycloneIdle"
+				idleAnimationCount="2"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="0.5 0.5 0.5"
+				explosionsBone="Unit_Terran_Cyclone_Turret"/>
+	</model>
+	<group size="3" rowSize="2" memberDeltaX="100" memberDeltaY="90"/>
+	<weapons>
+		<weapon name="TyphoonMissiles">
+			<model>
+				<missileWeapon  muzzleBone="Muzzle"
+						muzzleCount="2"
+						missileScale="0.5"/>
+			</model>
+		</weapon>
+		<weapon name="TyphoonMissilesLocked" slotName="LockOn" enabled="0">
+			<model>
+				<missileWeapon  muzzleBone="Muzzle"
+						muzzleCount="2"
+						missileScale="0.5"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="6"/>
+				<hitpointsMax base="7"/>
+				<moraleMax base="8"/>
+				<movementMax base="3"/>
+				<rangedAccuracy base="8"/>
+
+				<productionCost base="32.0"/>
+				<requisitionsCost base="32.0"/>
+				<biomassCost base="24.0"/>
+				<requisitionsUpkeep base="2.0"/>
+				<biomassUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseVehiclesScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/CycloneIdle0"
+						sound="Units/Terran/VehicleExplode"
+						soundCount="6"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/CycloneWalk"
+						sound="Units/Terran/Cyclone/cyclone_mv_start"
+						soundCount="8"/>
+			</model>		
+		</move>
+		<attack>
+			<model>
+				<action animation="Units/Terran/CycloneAttack"
+						animationSpeed="0.1"
+						beginFire="0.33"
+						endFire="2.0"/>
+			</model>
+		</attack>
+		<useWeapon weaponSlotName="LockOn"
+				cooldown="2">
+			<model>
+				<action	animation="Units/Terran/CycloneAttack"
+						animationSpeed="0.1"
+						sound="Actions/Terran/cyclone_target_lock_on"
+						beginFire="0.66"
+						endFire="2.6"/>
+			</model>
+		</useWeapon>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Terran/HitAndRun"/>
+		<trait name="Terran/AI"/>
+		<trait name="Vehicle"/>
+	</traits>
+</unit>

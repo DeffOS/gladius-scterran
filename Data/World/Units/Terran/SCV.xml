@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/SCV"
+				material="Units/Terran/SCV"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Terran/SCVIdle"
+				idleAnimationCount="5"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="Bone_Spine"
+				walker="1"/>
+	</model>
+	<weapons>
+		<weapon name="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.466666666667"
+						fireSound="Units/Terran/SCV/SCVAttack"
+						fireSoundCount="3"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="10.0"/>
+				<meleeAccuracy base="8"/>
+				<meleeAttacks base="1"/>
+				<strengthDamage base="4"/>
+				<moraleMax base="10"/>
+				<movementMax base="3"/>
+
+				<productionCost base="48.0"/>
+				<requisitionsCost base="64.0"/>
+				<requisitionsUpkeep base="3.0"/>
+				<energyUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseColonizersScore base="1.0"/>
+				<increaseSupportScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Terran/SCVWalk"
+						meleeAnimation="Units/Terran/SCVAttack"
+						meleeBeginSwing="0.16"
+						meleeEndSwing="0.83"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Units/Terran/VehicleExplode"
+						soundCount="6"
+						soundDelay="0.15"
+						voiceSound="Units/Terran/SCV/Voice/SCVDeath"
+						voiceSoundCount="10"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Terran/SCVWalk"
+						sound="Units/Terran/SCV/SCVMove"
+						soundCount="1"/>
+			</model>		
+		</move>
+
+		<foundCity>
+			<model>
+				<action sound="Actions/Terran/CityCreate"
+						animation=""/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="80.0"/>
+						<influenceCost base="60.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</foundCity>
+		<clearTileUnitAbility cooldown="1"
+				icon="Actions/ClearTile"
+				name="ClearTile">
+			<model>
+				<action animation="Units/Terran/SCVWork"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions/>
+					<areas/>
+				</target>
+			</beginTargets>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="5"/>
+						<requisitionsCost base="5"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</clearTileUnitAbility>
+		<genericUnitAbility name="Terran/RepairMech"
+				cooldown="1">
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Heal"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="4.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMin="1" rangeMax="1">
+					<conditions>
+						<unit>
+							<allied/>
+							<damaged/>
+						</unit>
+						<unit match="Any">
+							<type name="Terran/SCV"/>
+							<trait name="Fortification"/>
+							<trait name="Vehicle"/>
+							<trait name="Tank"/>
+							<trait name="Walker"/>
+							<trait name="Necrons/LivingMetal"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpoints add="8.0"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+
+		<genericUnitAbility name="Terran/BuildBunker"
+			icon="Units/Terran/Bunker"
+			cooldown="4"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/Bunker">
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="64.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Bunker"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<sharedCooldowns>
+				<!--action name="Terran/BuildBunker"/-->
+				<action name="Terran/BuildMissileTurret"/>
+				<!-- <action name="Terran/BuildOremine"/> -->
+				<!-- <action name="Terran/BuildRefinery"/> -->
+				<!-- <action name="Terran/BuildGenerator"/> -->
+				<action name="Terran/BuildArtillery"/>
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/BuildMissileTurret"
+			icon="Units/Terran/MissileTurret"
+			cooldown="4"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/MissileTurret">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<!-- <action name="Terran/BuildMissileTurret"/> -->
+				<!-- <action name="Terran/BuildOremine"/> -->
+				<!-- <action name="Terran/BuildRefinery"/> -->
+				<!-- <action name="Terran/BuildGenerator"/> -->
+				<action name="Terran/BuildArtillery"/>
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacementsmall0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="64.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<noFeature name="GravityWaves"/>
+							<noEnemyCity/>
+							<noUnit/>
+							<land/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/MissileTurret"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+
+		<genericUnitAbility name="Terran/BuildOremine"
+			icon="Buildings/Terran/Requisitions"
+			cooldown="4"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/SCV">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<action name="Terran/BuildMissileTurret"/>
+				<!-- <action name="Terran/BuildOremine"/> -->
+				<action name="Terran/BuildRefinery"/>
+				<action name="Terran/BuildGenerator"/>
+				<action name="Terran/BuildArtillery"/>
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="48.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Oremine"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/BuildRefinery"
+			icon="Buildings/Terran/Biomass"
+			cooldown="4"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/SCV">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<action name="Terran/BuildMissileTurret"/>
+				<action name="Terran/BuildOremine"/>
+				<!-- <action name="Terran/BuildRefinery"/> -->
+				<action name="Terran/BuildGenerator"/>
+				<action name="Terran/BuildArtillery"/>
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="48.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Refinery"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/BuildGenerator"
+			icon="Buildings/Terran/Energy"
+			cooldown="4"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/SCV">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<action name="Terran/BuildMissileTurret"/>
+				<action name="Terran/BuildOremine"/>
+				<action name="Terran/BuildRefinery"/>
+				<!-- <action name="Terran/BuildGenerator"/> -->
+				<action name="Terran/BuildArtillery"/>
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="48.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Generator"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+
+		<genericUnitAbility name="Terran/BuildArtillery"
+			icon="Units/Terran/Artillery"
+			cooldown="8"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/Artillery">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<action name="Terran/BuildMissileTurret"/>
+				<!-- <action name="Terran/BuildOremine"/> -->
+				<!-- <action name="Terran/BuildRefinery"/> -->
+				<!-- <action name="Terran/BuildGenerator"/> -->
+				<!-- <action name="Terran/BuildArtillery"/> -->
+				<action name="Terran/BuildGalleon"/>
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="128.0"/>
+						<biomassCost base="96.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<noFeature name="GravityWaves"/>
+							<noEnemyCity/>
+							<noUnit/>
+							<land/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Artillery"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/BuildGalleon"
+			icon="Units/Terran/Galleon"
+			cooldown="8"
+			costScalesWithPace="1"
+			requiredUpgrade="Terran/Galleon">
+			<sharedCooldowns>
+				<action name="Terran/BuildBunker"/>
+				<action name="Terran/BuildMissileTurret"/>
+				<!-- <action name="Terran/BuildOremine"/> -->
+				<!-- <action name="Terran/BuildRefinery"/> -->
+				<!-- <action name="Terran/BuildGenerator"/> -->
+				<action name="Terran/BuildArtillery"/>
+				<!-- <action name="Terran/BuildGalleon"/> -->
+			</sharedCooldowns>
+			<model>
+				<action animation="Units/Terran/SCVWork"
+						sound="Actions/Terran/terran_buildingplacement0"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="128.0"/>
+						<biomassCost base="64.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="Resource"/>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noEnemyCity/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/Galleon"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraInfantryArmour" requiredUpgrade="Terran/ExtraInfantryArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Bulky"/>
+		<trait name="JetPack"/>
+	</traits>
+</unit>

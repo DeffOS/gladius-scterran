@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Buildings/Terran/BunkerDiffuse"/>
+		<texture name="Buildings/Terran/BunkerNormal"/>
+		<texture name="Buildings/Terran/BunkerSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

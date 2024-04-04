@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Buildings/Terran/AutoRefineryDiffuse"/>
+		<texture name="Buildings/Terran/AutoRefineryNormal"/>
+		<texture name="Buildings/Terran/AutoRefinerySIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

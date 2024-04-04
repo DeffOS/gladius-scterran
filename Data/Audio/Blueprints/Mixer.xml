@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mixer distanceModel="InverseClamped" maxDistance="1000000" referenceDistance="1500" rolloffFactor="4">
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch0" gain="0.25" pitch="1"/>
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch1" gain="0.25" pitch="1"/>
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch2" gain="0.25" pitch="1"/>
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch3" gain="0.25" pitch="1"/>
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch4" gain="0.25" pitch="1"/>
+	<cachedSound name="Weapons/Terran/marauder_attacklaunch5" gain="0.25" pitch="1"/>
+
+	<cachedSound name="Weapons/Terran/reaper_movement0" gain="0.5" pitch="1"/>
+	<cachedSound name="Weapons/Terran/reaper_movement1" gain="0.5" pitch="1"/>
+	<cachedSound name="Weapons/Terran/reaper_movement2" gain="0.5" pitch="1"/>
+	<cachedSound name="Weapons/Terran/reaper_movement3" gain="0.5" pitch="1"/>
+	<cachedSound name="Weapons/Terran/reaper_movement4" gain="0.5" pitch="1"/>
+</mixer>

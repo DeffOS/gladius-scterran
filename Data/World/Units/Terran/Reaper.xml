@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Reaper"
+				material="Units/Terran/Reaper"
+				idleAnimation="Units/Terran/ReaperIdle"
+				idleAnimationCount="3"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="0.45 0.45 0.45"
+				bloodBone="Bone Chest Top"/>
+	</model>
+	<group size="6" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="GaussPistols">
+			<model>
+				<projectileWeapon
+						muzzleBone="Muzzle"
+						muzzleCount="2"/>
+			</model>
+		</weapon>
+		<weapon name="ReaperD8">
+			<model>
+				<projectileWeapon
+						muzzleBone="Muzzle1"
+						muzzleCount="1"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="4"/>
+				<hitpointsMax base="2.5"/>
+				<meleeAccuracy base="8"/>
+				<meleeAttacks base="1"/>
+				<strengthDamage base="1.5"/>
+				<moraleMax base="8"/>
+				<movementMax base="4"/>
+				<rangedAccuracy base="8"/>
+				
+				<productionCost base="32.0"/>
+				<requisitionsCost base="32.0"/>
+				<biomassCost base="32.0"/>
+				<requisitionsUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseInfantryScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/ReaperAttack"
+						beginFire="0.33"
+						endFire="2.6"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/ReaperDeath"
+						animationCount="1"
+						sound="Units/Terran/Bodyfall"
+						soundCount="9"
+						soundDelay="0.4"
+						voiceSound="Units/Terran/Marine/ReaperDeath"
+						voiceSoundCount="8"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/ReaperWalk"
+						sound="Units/Terran/Reaper/reaper_movement"
+						soundCount="5"/>
+			</model>
+		</move>
+		<jumpPack cooldown="2">
+			<model>
+				<action animation="Units/Terran/ReaperJump"
+						sound="Actions/Terran/reaper_jumplaunch0"
+						soundCount="1"/>
+			</model>
+			<modifiers>
+				<modifier>
+					<effects>
+						<movement min="6"/>
+						<movementMax min="6"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<!-- <endTargets> -->
+				<!-- <target> -->
+					<!-- <areas> -->
+						<!-- <area affects="Unit"> -->
+							<!-- <modifiers> -->
+								<!-- <effects> -->
+									<!-- <addTrait duration="1" name="Unwieldy"/> -->
+								<!-- </effects> -->
+							<!-- </modifiers> -->
+						<!-- </area> -->
+					<!-- </areas> -->
+				<!-- </target> -->
+			<!-- </endTargets> -->
+		</jumpPack>
+		<scout consumedActionPoints="0"
+				consumedMovement="0"
+				cooldown="3"
+				requiredActionPoints="0">
+			<model>
+				<action sound="Actions/Scan"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" radius="3">
+							<modifiers>
+								<modifier>
+									<effects>
+										<reveal/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</scout>
+	</actions>
+	<traits>
+		<trait name="JetPack"/>
+		<trait name="Infiltrate"/>
+		<trait name="Terran/HitAndRun"/>
+		<trait name="ExtraInfantryArmour" requiredUpgrade="Terran/ExtraInfantryArmour"/>
+	</traits>
+</unit>

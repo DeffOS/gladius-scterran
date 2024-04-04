@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/MedivacDiffuse"/>
+		<texture name="Units/Terran/MedivacNormal"/>
+		<texture name="Units/Terran/MedivacSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

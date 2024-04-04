@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+	<textures>
+		<texture name="Units/Terran/ReaperDiffuse"/>
+		<texture name="Units/Terran/ReaperNormal"/>
+		<texture name="Units/Terran/ReaperSIC"/>
+		<texture name="ShadowMapColor"/>
+	</textures>
+</material>

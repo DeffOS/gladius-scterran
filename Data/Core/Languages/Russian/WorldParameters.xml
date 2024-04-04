@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Difficulty0Terran" value="Новобранец"/>
+	<entry name="Difficulty1Terran" value="Капрал"/>
+	<entry name="Difficulty2Terran" value="Сержант"/>
+	<entry name="Difficulty3Terran" value="Офицер"/>
+	<entry name="Difficulty4Terran" value="Капитан"/>
+	<entry name="Difficulty5Terran" value="Командир"/>
+	<entry name="Difficulty6Terran" value="Генерал"/>
+</language>

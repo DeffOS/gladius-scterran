@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Buildings/Terran/Energy">
+	<model>
+		<structureUnit mesh="Buildings/Terran/Biodome"
+				material="Buildings/Terran/Biodome"
+				idleAnimation="Buildings/Terran/BiodomeIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				heatImpactSound="Impacts/HeatConcrete"
+				heatImpactSoundCount="4"
+				kineticImpactSound="Impacts/KineticConcrete"
+				kineticImpactSoundCount="5"
+				scale="0.8 0.8 0.8"
+				explosionsBone="Bldg_Terran_BioDomeCommand"
+				uvAnimated="0"/>
+	</model>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<cargoSlots base="2"/>
+				<hitpointsMax base="18.0"/>
+				<moraleMax base="10"/>
+				<movementMax max="0"/>
+				<sight base="1"/>
+
+				<productionCost base="36.0"/>
+				<requisitionsCost base="48.0"/>
+				<biomassUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseColonizersScore base="0.5"/>
+				<increaseEnergyScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="Fortification"/>
+		<trait name="Terran/ResourceBonus/Energy"/>
+	</traits>
+</unit>

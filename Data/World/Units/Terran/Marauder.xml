@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Marauder"
+				material="Units/Terran/Marauder"
+				idleAnimation="Units/Terran/MarauderIdle"
+				idleAnimationCount="5"
+				idleContinuously="1"
+				normalWeight="0.1"
+				scale="0.7 0.7 0.7"
+				bloodBone="BoneBack02"
+				walker="1"/>
+	</model>
+	<group size="3" rowSize="2" memberDeltaX="100" memberDeltaY="90"/>
+	<weapons>
+		<weapon name="PunisherGrenades">
+			<model>
+				<missileWeapon muzzleBone="Muzzle"
+						muzzleCount="2"
+						cycleMuzzles="1"/>
+			</model>	
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="6"/>
+				<meleeAccuracy base="10"/>
+				<strengthDamage base="1.5"/>
+				<moraleMax base="14"/>
+				<movementMax base="3"/>
+				<rangedAccuracy base="8"/>
+				<cargoSlotsRequired base="2"/>
+
+				<productionCost base="40.0"/>
+				<requisitionsCost base="48.0"/>
+				<biomassCost base="24.0"/>
+				<requisitionsUpkeep base="3.0"/>
+				<biomassUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseInfantryScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/MarauderAttack"
+						beginFire="0.2"
+						endFire="1.2"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/MarauderIdle0"
+						animationCount="1"
+						sound="Units/Terran/Marauder/marauder_bodyfall_0"
+						soundCount="3"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/MarauderWalk"
+						sound="Units/Terran/SharedEffects/FootstepsInfantry"
+						soundCount="4"/>
+			</model>	
+		</move>
+		<genericUnitAbility
+				consumedActionPoints="0" 
+				consumedMovement="0"
+				cooldown="2"
+				name="Terran/Stimpack"
+				requiredUpgrade="Terran/Stimpack">
+			<model>
+				<action sound="Actions/Terran/scr_stimpack"
+						soundCount="2"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpointsFactorFromMax add="-0.15"/>
+										<addTrait name="Terran/Stimpack" duration="2"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="Bulky"/>
+		<trait name="Terran/AblativeScales" requiredUpgrade="Terran/AblativeScales"/>
+		<trait name="ExtraInfantryArmour" requiredUpgrade="Terran/ExtraInfantryArmour"/>
+	</traits>
+</unit>

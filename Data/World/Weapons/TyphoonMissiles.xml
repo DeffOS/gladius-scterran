@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<missileWeapon fireInterval="0.48"
+				fireSound="Weapons/Terran/cyclone_missile_launch"
+				fireSoundCount="6"
+				explosionSound="Explosions/Terran/cyclone_missile_impact"
+				explosionSoundCount="4"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="2"/>
+				<rangedArmorPenetration add="4"/>
+				<rangedDamage add="3"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="2"/>
+	<traits>
+		<trait name="Terran/AdvancedOptics" requiredUpgrade="Terran/AdvancedOptics"/>
+	</traits>
+</weapon>

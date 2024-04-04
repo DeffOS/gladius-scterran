@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Wraith"
+				material="Units/Terran/Wraith"
+				idleAnimation="Units/Terran/WraithIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				position="0 0 112"
+				scale="1.4 1.4 1.4"
+				explosionsBone="Box02"/>
+	</model>
+	<group size="3" rowSize="2" memberDeltaX="110" memberDeltaY="100"/>
+	<weapons>
+		<weapon name="GeminiMissiles">
+			<model>
+				<missileWeapon muzzleBone="MissleMuzzle"
+						muzzleCount="2"
+						fireInterval="0.1"
+						missileScale="0.8"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="7"/>
+				<hitpointsMax base="8"/>
+				<moraleMax base="12"/>
+				<movementMax base="6"/>
+				<rangedAccuracy base="10"/>
+
+				<productionCost base="32.0"/>
+				<requisitionsCost base="96.0"/>
+				<biomassCost base="32.0"/>
+				<energyUpkeep base="2.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseAircraftScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<attack>
+			<model>
+				<action animation="Units/Terran/WraithAttack"
+						beginFire="0.33"
+						endFire="2.6"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Terran/WraithIdle"
+						sound="Units/Terran/VehicleExplode"
+						soundCount="6"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/WraithWalk"
+						sound="Units/Terran/FootstepsInfantry"
+						soundCount="4"/>
+			</model>		
+		</move>
+		<jink consumedActionPoints="0" consumedMovement="0" requiredActionPoints="0" cooldown="3">
+			<model>
+				<action sound="Actions/ChargeUp"/>
+			</model>
+			<conditions>
+				<unit>
+					<notAttackedThisTurn/>
+				</unit>
+			</conditions>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Jink"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</jink>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="Terran/DisplacementField" requiredUpgrade="Terran/DisplacementField"/>
+		<trait name="Vehicle"/>
+		<trait name="Flyer"/>
+	</traits>
+</unit>

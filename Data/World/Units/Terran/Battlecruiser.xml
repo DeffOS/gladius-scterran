@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Units/Terran/Battlecruiser"
+				material="Units/Terran/Battlecruiser"
+				idleAnimation="Units/Terran/BattlecruiserIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				position="0 0 128"
+				scale="1.3 1.3 1.3"
+				explosionsBone="Unit_Terran_Battlecruiser_Main"/>
+	</model>
+	<weapons>
+		<weapon name="ATXLaserBattery" count="2">
+			<model>
+				<projectileWeapon muzzleBone="Muzzle"
+						muzzleCount="6"
+						cycleMuzzles="1"/>
+			</model>
+		</weapon>
+		<weapon name="YamatoCannon" slotName="Yamato" enabled="0">
+			<model>
+				<projectileWeapon muzzleBone="MuzzleYamato"
+						muzzleCount="1"
+						fireInterval="1.5"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="10"/>
+				<hitpointsMax base="160.0"/>
+				<moraleMax base="32"/>
+				<movementMax base="3"/>
+
+				<productionCost base="160.0"/>
+				<requisitionsCost base="320.0"/>
+				<biomassCost base="128.0"/>
+				<influenceCost base="64.0"/>
+				<requisitionsUpkeep base="12.0"/>
+				<energyUpkeep base="12.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseAircraftScore base="0.2"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
+	<actions>
+		<die>
+			<model>
+				<action animation="Units/Terran/BattlecruiserIdle"
+						sound="Units/Terran/VehicleBigExplode"
+						soundCount="10"
+						soundDelay="0.4"/>
+			</model>		
+		</die>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<move>
+			<model>
+				<action animation="Units/Terran/BattlecruiserWalk"
+						sound="Units/Terran/battlecruiser_movement"
+						soundCount="5"/>
+			</model>		
+		</move>
+		<attack>
+			<model>
+				<action beginFire="0.15" endFire="2.2"/>
+			</model>
+		</attack>
+		<dimensionalKey name="Terran/Teleport"
+				cooldown="8">
+			<model>
+				<action animation="Units/Terran/BattlecruiserWalk"
+						sound="Actions/Terran/battlecruiser_hyperspaceout"
+						soundCount="3"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<influenceCost base="80"/>
+					</effects>
+				</modifier>
+			</modifiers>
+		</dimensionalKey>
+		<useWeapon weaponSlotName="Yamato"
+				cooldown="6"
+				requiredUpgrade="Terran/BattlecruiserYamato">
+			<model>
+				<action	animation="Units/Terran/BattlecruiserSpell"
+						animationSpeed="2.0"
+						beginFire="2.2"
+						endFire="2.5"/>
+			</model>	
+		</useWeapon>
+		<auraOfFear passive="1">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" excludeRadius="0" radius="2">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Fear"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</auraOfFear>
+	</actions>
+	<traits>
+		<trait name="ExtraVehicleArmour" requiredUpgrade="Terran/ExtraVehicleArmour"/>
+		<trait name="Terran/Biosteel" requiredUpgrade="Terran/Biosteel"/>
+		<trait name="VeryBulky"/>
+		<trait name="Vehicle"/>
+		<trait name="Flyer"/>
+	</traits>
+</unit>

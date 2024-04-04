@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait icon="Actions/Terran/Stimpack"
+		category="Buff">
+	<modifiers>
+		<modifier>
+			<effects>
+				<movementMax add="1"/>
+				<attacks mul="0.50"/>
+			</effects>
+		</modifier>
+	</modifiers>
+</trait>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Terran/Headquarters" value="Городская крепость"/>
+	<entry name="Terran/HeadquartersDescription" value="Главное здание города, производит ресурсы и КСМ."/>
+	<entry name="Terran/HeadquartersFlavor" value=""/>
+
+	<entry name="Terran/Housing" value="Хранилище"/>
+	<entry name="Terran/HousingDescription" value="Здание, увеличивающее лимит населения."/>
+	<entry name="Terran/HousingFlavor" value=""/>
+
+	<!-- Resources -->
+	<entry name="Terran/Ore" value="Буровая установка"/>
+	<entry name="Terran/OreDescription" value="Здание, которое добывает минералы."/>
+	<entry name="Terran/OreFlavor" value=""/>
+
+	<entry name="Terran/Biomass" value="Переработчик газа"/>
+	<entry name="Terran/BiomassDescription" value="Здание, которое синтезирует веспен газ."/>
+	<entry name="Terran/BiomassFlavor" value=""/>
+
+	<entry name="Terran/Energy" value="Генератор"/>
+	<entry name="Terran/EnergyDescription" value="Здание, которое генерирует энергию."/>
+	<entry name="Terran/EnergyFlavor" value=""/>
+
+	<entry name="Terran/Research" value="Лаборатория"/>
+	<entry name="Terran/ResearchDescription" value="Здание, которое производит исследования."/>
+	<entry name="Terran/ResearchFlavor" value=""/>
+
+	<entry name="Terran/Influence" value="Радарное звено"/>
+	<entry name="Terran/InfluenceDescription" value="Здание, которое производит влияние."/>
+	<entry name="Terran/InfluenceFlavor" value=""/>
+
+	<entry name="Terran/Loyalty" value="Голопроэктор"/>
+	<entry name="Terran/LoyaltyDescription" value="Здание, которое увеличивает лояльность."/>
+	<entry name="Terran/LoyaltyFlavor" value=""/>
+
+	<!-- Factories -->
+	<entry name="Terran/Infantry" value="Казармы"/>
+	<entry name="Terran/InfantryDescription" value="Здание тренирующее пехоту, производит минералы и увеличивает лимит населения."/>
+	<entry name="Terran/InfantryFlavor" value=""/>
+
+	<entry name="Terran/Heroes" value="Притон Наёмников"/>
+	<entry name="Terran/HeroesDescription" value="Здание тренирующее героев, производит влияние и увеличивает лояльность."/>
+	<entry name="Terran/HeroesFlavor" value=""/>
+
+	<entry name="Terran/Vehicles" value="Завод"/>
+	<entry name="Terran/VehiclesDescription" value="Здание собирающее технику, производит веспен газ."/>
+	<entry name="Terran/VehiclesFlavor" value=""/>
+
+	<entry name="Terran/Construction" value="Коммандный центр"/>
+	<entry name="Terran/ConstructionDescription" value="Здание производящее постройку новых зданий, проводит ресурсы и увеличивает лимит населения."/>
+	<entry name="Terran/ConstructionFlavor" value=""/>
+
+	<entry name="Terran/Aircraft" value="Космопорт"/>
+	<entry name="Terran/AircraftDescription" value="Здание собирающее летательную технику, производит энергию и влияние."/>
+	<entry name="Terran/AircraftFlavor" value=""/>
+</language>

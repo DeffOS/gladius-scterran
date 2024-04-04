@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<missileWeapon fireInterval="1.2"
+				fireSound="Weapons/Terran/missileturret_scr_attacklaunch"
+				fireSoundCount="1"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="4"/>
+				<rangedArmorPenetration add="4"/>
+				<rangedDamage add="3"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="4"/>
+	<traits>
+		<trait name="Armourbane"/>
+		<trait name="TargetOnlyAir"/>
+	</traits>
+</weapon>

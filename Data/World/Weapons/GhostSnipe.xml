@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<beamWeapon	fireInterval="0.4"
+				fireSound="Weapons/Terran/ghost_snipeattacklaunch"
+				fireSoundCount="1"
+				explosionSound="Impacts/Terran/ghost_snipeimpact"
+				explosionSoundCount="5"
+
+				beamsBlueprint="Effects/LaserBeams"
+		 		beamsEmitterBlueprint="Effects/RangerLongRifleBeamsEmitter"
+		 		muzzleFlashesBlueprint="Effects/LaserMuzzleFlashes"
+		 		muzzleFlashesEmitterBlueprint="Effects/RangerLongRifleMuzzleFlashesEmitter"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="1"/>
+				<rangedArmorPenetration add="8"/>
+				<rangedDamage add="6.0"/>
+				<rangedAccuracy min="12.0" max="12.0"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMax="4"/>
+	<traits>
+		<trait name="Armourbane"/>
+		<trait name="Sniper"/>
+		<trait name="Terran/SnipeShot"/>
+	</traits>
+</weapon>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon>
+	<model>
+		<projectileWeapon fireInterval="1.2"
+				fireSound="Units/Terran/Artillery/xelnaga_missile_attack_launch_"
+				fireSoundCount="2"
+				explosionSound="Impacts/Terran/mengsk_expstrike_explo_punch"
+				explosionSoundCount="1"
+
+				muzzleFlashesBlueprint="Effects/CannonMuzzleFlashes"
+				explosionsBlueprint="Effects/MissileExplosions"
+				explosionsEmitterBlueprint="Effects/HeavyBombClusterExplosionsEmitter"/>
+	</model>
+	<modifiers>
+		<modifier>
+			<effects>
+				<attacks add="2"/>
+				<rangedArmorPenetration add="6"/>
+				<rangedDamage add="8"/>
+				<strengthDamage base="0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<target rangeMin="3" rangeMax="8"/>
+	<traits>
+		<trait name="LargeBlast"/>
+		<trait name="Ordnance"/>
+		<trait name="Barrage"/>
+		<!-- <trait name="TargetOnlyGround"/> -->
+	</traits>
+</weapon>

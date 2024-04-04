@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<unit mesh="Buildings/Terran/Galleon"
+				material="Buildings/Terran/Galleon"
+				idleAnimation="Buildings/Terran/GalleonIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				position="0 0 128"
+				scale="0.7 0.7 0.7"
+				explosionsBone="Mesh_HangerBay"
+				uvAnimated="0"/>
+	</model>
+	<weapons>
+		<weapon name="GalleonTorpedos">
+			<model>
+				<missileWeapon muzzleBone="Muzzle"
+						muzzleCount="2"
+						missileScale="0.8"
+						cycleMuzzles="1"/>
+			</model>
+		</weapon>
+		<!--weapon name="None" slotName="wack" enabled="0">
+			<model>
+				<weapon mesh="Buildings/Terran/GalleonHangar"
+						material="Units/AstraMilitarum/Valkyrie"
+						bone="Mesh_HangerBay"/>
+			</model>
+		</weapon-->
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="7"/>
+				<hitpointsMax base="28.0"/>
+				<moraleMax base="20"/>
+				<movementMax max="2"/>
+				<cargoSlots base="2"/>
+
+				<productionCost base="36.0"/>
+				<requisitionsCost base="128.0"/>
+				<biomassCost base="64.0"/>
+				<requisitionsUpkeep base="4.0"/>
+				<energyUpkeep base="4.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<idle>
+			<model>
+				<action/>
+			</model>
+		</idle>
+		<die>
+			<model>
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Buildings/Terran/GalleonWalk"
+					sound="Units/Terran/Buildings/terran_buildingmovement"
+					soundCount="3"/>
+			</model>		
+		</move>
+		<attack>
+			<model>
+				<action animation="Buildings/Terran/GalleonAttack" beginFire="0.2" endFire="1.5"/>
+			</model>
+		</attack>
+		<genericUnitAbility name="Terran/TrainMarine"
+			icon="Units/Terran/Marine"
+			cooldown="2">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="32.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addUnit name="Terran/Marine"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addTrait duration="2" removeOnSourceDeath="1" name="Terran/FieldProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<endTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/InProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</endTargets>
+			<sharedCooldowns>
+				<!--action name="Terran/TrainMarine"/-->
+				<action name="Terran/TrainFirebat"/>
+				<action name="Terran/TrainMarauder"/>
+				<action name="Terran/TrainGoliath"/>
+				<action name="Terran/TrainCyclone"/>
+			</sharedCooldowns>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/TrainFirebat"
+			icon="Units/Terran/Firebat"
+			cooldown="2"
+			requiredUpgrade="Terran/Firebat">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="48.0"/>
+						<biomassCost base="16.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addUnit name="Terran/Firebat"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addTrait duration="2" removeOnSourceDeath="1" name="Terran/FieldProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<endTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/InProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</endTargets>
+			<sharedCooldowns>
+				<action name="Terran/TrainMarine"/>
+				<!--action name="Terran/TrainFirebat"/-->
+				<action name="Terran/TrainMarauder"/>
+				<action name="Terran/TrainGoliath"/>
+				<action name="Terran/TrainCyclone"/>
+			</sharedCooldowns>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/TrainMarauder"
+			icon="Units/Terran/Marauder"
+			cooldown="2"
+			requiredUpgrade="Terran/Marauder">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="48.0"/>
+						<biomassCost base="16.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addUnit name="Terran/Marauder"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addTrait duration="2" removeOnSourceDeath="1" name="Terran/FieldProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<endTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/InProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</endTargets>
+			<sharedCooldowns>
+				<action name="Terran/TrainMarine"/>
+				<action name="Terran/TrainFirebat"/>
+				<!--action name="Terran/TrainMarauder"/-->
+				<action name="Terran/TrainGoliath"/>
+				<action name="Terran/TrainCyclone"/>
+			</sharedCooldowns>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/TrainGoliath"
+			icon="Units/Terran/Goliath"
+			cooldown="3"
+			requiredUpgrade="Terran/Goliath">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="64.0"/>
+						<biomassCost base="16.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addUnit name="Terran/Goliath"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addTrait duration="3" removeOnSourceDeath="1" name="Terran/FieldProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<endTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="2" name="Terran/InProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</endTargets>
+			<sharedCooldowns>
+				<action name="Terran/TrainMarine"/>
+				<action name="Terran/TrainFirebat"/>
+				<action name="Terran/TrainMarauder"/>
+				<!--action name="Terran/TrainGoliath"/-->
+				<action name="Terran/TrainCyclone"/>
+			</sharedCooldowns>
+		</genericUnitAbility>
+		<genericUnitAbility name="Terran/TrainCyclone"
+			icon="Units/Terran/Cyclone"
+			cooldown="3"
+			requiredUpgrade="Terran/Cyclone">
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="64.0"/>
+						<biomassCost base="32.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<noFeatureCategory name="WireWeed"/>
+							<land/>
+							<noUnit/>
+							<noFeature name="GravityWaves"/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addUnit name="Terran/Cyclone"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+						<area affects="Unit">
+							<modifiers>
+								<modifier visible="0">
+									<effects>
+										<addTrait duration="3" removeOnSourceDeath="1" name="Terran/FieldProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+			<endTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="2" name="Terran/InProduction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</endTargets>
+			<sharedCooldowns>
+				<action name="Terran/TrainMarine"/>
+				<action name="Terran/TrainFirebat"/>
+				<action name="Terran/TrainMarauder"/>
+				<action name="Terran/TrainGoliath"/>
+				<!--action name="Terran/TrainCyclone"/-->
+			</sharedCooldowns>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="Fortification"/>
+		<trait name="Transport"/>
+		<trait name="VeryBulky"/>
+		<trait name="Flyer"/>
+	</traits>
+</unit>

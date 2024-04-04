@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit>
+	<model>
+		<structureUnit mesh="Buildings/Terran/Bunker"
+				material="Buildings/Terran/Bunker"
+				idleAnimation=""
+				idleAnimationCount="0"
+				heatImpactSound="Impacts/HeatArmored"
+				heatImpactSoundCount="4"
+				kineticImpactSound="Impacts/KineticArmored"
+				kineticImpactSoundCount="5"
+				scale="1.5 1.5 1.5"
+				explosionsBone="Bone_Link_Object"
+				uvAnimated="0"
+				portraitFocusHeightModifier="16"/>
+	</model>
+	<weapons>
+		<weapon name="BunkerGauss">
+			<model>
+				<projectileWeapon
+						muzzleBone="Muzzle"
+						muzzleCount="4"
+						effectFaceWeight="0"
+						cycleMuzzles="0"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor base="8"/>
+				<hitpointsMax base="24.0"/>
+				<cargoSlots base="4"/>
+				<moraleMax base="20"/>
+				<movementMax max="0"/>
+
+				<productionCost base="36.0"/>
+				<requisitionsCost base="48.0"/>
+				<requisitionsUpkeep base="1.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action beginFire="0.15" endFire="1.2"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action sound="Units/HeavyBuildingDie"
+					soundCount="3"/>
+			</model>
+		</die>
+		<genericUnitAbility name="Terran/Deconstruct"
+				requiredActionPoints="1"
+				consumedActionPoints="1"
+				costScalesWithPace="1"
+				cooldown="1">
+			<model>
+				<action sound="Actions/Terran/terran_constructionend"
+					soundCount="1"/>
+			</model>
+			<conditions>
+				<unit>
+					<cargoSlotsTaken equal="0"/>
+				</unit>
+			</conditions>
+			<modifiers>
+				<modifier visible="0">
+					<effects>
+						<requisitionsCost base="-24.0"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="1" name="Terran/Deconstruction"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+	</actions>
+	<traits>
+		<trait name="ExtraStructureArmour" requiredUpgrade="Terran/ExtraStructureArmour"/>
+		<trait name="Terran/FireSuppression" requiredUpgrade="Terran/FireSuppression"/>
+		<trait name="Fortification"/>
+		<trait name="Transport"/>
+		<trait name="Terran/BunkerUnitCount"/>
+	</traits>
+</unit>

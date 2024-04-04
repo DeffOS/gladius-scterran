@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Terran/ClearTile" value="Очистить клетку"/>
+
+	<entry name="Terran/ScanSweep" value="Орбитальное Сканирование"/>
+	<entry name="Terran/DropSupply" value="<string name='Actions/DeployUnit'/>"/>
+	<entry name="Terran/DropSupplyHint" value="<string name='Actions/DeployUnitHint'/>"/>
+	<entry name="Terran/DropMule" value="<string name='Actions/DeployUnit'/>"/>
+	<entry name="Terran/DropMuleHint" value="<string name='Actions/DeployUnitHint'/>"/>
+
+	<entry name="Terran/MineRocks" value="Вскопать камни"/>
+	<entry name="Terran/MineRocksDescription" value="Удаляет камни из выбранной клетки"/>
+
+	<entry name="Terran/BuildBunker" value="Построить Бункер"/>
+	<entry name="Terran/BuildBunkerDescription" value="Возводит бункер из которого пехота может вести огонь"/>
+
+	<entry name="Terran/Deconstruct" value="Разобрать"/>
+	<entry name="Terran/DeconstructDescription" value="Данная структура будет уничтожена с частичным возвращением материалов. Невозможно использовать если внутри находятся юниты."/>
+	
+	<entry name="Terran/BuildGalleon" value="Построить Галеон"/>
+	<entry name="Terran/BuildGalleonDescription" value="Начинает строительство мобильного завода войск Галеон"/>
+
+	<entry name="Terran/TrainMarine" value="Произвести Морпеха"/>
+	<entry name="Terran/TrainMarineDescription" value="<string name='Units/Terran/MarineDescription'/>"/>
+	<entry name="Terran/TrainFirebat" value="Произвести Огнемётчика"/>
+	<entry name="Terran/TrainFirebatDescription" value="<string name='Units/Terran/FirebatDescription'/>"/>
+	<entry name="Terran/TrainMarauder" value="Произвести Мародёра"/>
+	<entry name="Terran/TrainMarauderDescription" value="<string name='Units/Terran/MarauderDescription'/>"/>
+	<entry name="Terran/TrainGoliath" value="Произвести Голиафа"/>
+	<entry name="Terran/TrainGoliathDescription" value="<string name='Units/Terran/GoliathDescription'/>"/>
+	<entry name="Terran/TrainCyclone" value="Произвести Циклона"/>
+	<entry name="Terran/TrainCycloneDescription" value="<string name='Units/Terran/CycloneDescription'/>"/>
+
+	<entry name="Terran/Stimpack" value="<string name='Traits/Terran/Stimpack'/>"/>
+	<entry name="Terran/StimpackDescription" value="<string name='Traits/Terran/StimpackDescription'/>"/>
+
+	<entry name="Terran/MedivacAfterburn" value="<string name='Traits/Terran/MedivacAfterburn'/>"/>
+	<entry name="Terran/MedivacAfterburnDescription" value="<string name='Traits/Terran/MedivacAfterburnDescription'/>"/>
+
+	<entry name="Terran/InterferenceMatrix" value="<string name='Traits/Terran/InterferenceMatrix'/>"/>
+	<entry name="Terran/InterferenceMatrixDescription" value="<string name='Traits/Terran/InterferenceMatrixDescription'/>"/>
+
+	<entry name="Terran/AntiArmor" value="<string name='Traits/Terran/AntiArmor'/>"/>
+	<entry name="Terran/AntiArmorDescription" value="<string name='Traits/Terran/AntiArmorDescription'/>"/>
+
+	<entry name="Terran/DeployTurret" value="Установить Авто-Турель"/>
+	<entry name="Terran/DeployTurretDescription" value="Устанавливает временную боевую Авто-турель."/>
+
+	<entry name="Terran/Teleport" value="Телепортация"/>
+	<entry name="Terran/TeleportDescription" value="Телепортирует владельца на указанную клетку."/>
+
+	<!--Heroes-->
+	<entry name="Terran/Cloak" value="Маскировка"/>
+	<entry name="Terran/CloakDescription" value="Временно уменьшает полученный урон."/>
+
+	<entry name="Terran/Snipe" value="Точный выстрел"/>
+	<entry name="Terran/SnipeDescription" value="Наносит пробивной урон по единичной цели издалека."/>
+
+	<entry name="Terran/OccularImplant" value="Оккулярный имплант"/>
+	<entry name="Terran/OccularImplantDescription" value="Позволяет видить сквозь препятствия ландшафта."/>
+
+	<entry name="Terran/Nuke" value="Запуск Ядерной ракеты"/>
+	<entry name="Terran/NukeDescription" value="Инициирует запуск ядерной боеголовки. Указанная точка будет взорвана в следуюещем ходу."/>
+
+
+	<entry name="Terran/LoadShell" value="Загрузить снаряд"/>
+	<entry name="Terran/LoadShellDescription" value="Увеличивает очки действия, при аттаке бонус удаляется."/>
+
+	<entry name="Terran/ArmoredDivision" value="Бронированная Дивизия"/>
+	<entry name="Terran/ArmoredDivisionDescription" value="Увеличивает броню Технике в непосредственной близости от танка."/>
+
+	<entry name="Terran/SiegeMode" value="Смена Режима"/>
+	<entry name="Terran/SiegeModeDescription" value="Переключает режим между Осадным в котором не может двигаться и Сложенным с ослабленным вооружением."/>
+
+
+	<entry name="Terran/Nanites" value="Ремонт Нанитами"/>
+	<entry name="Terran/NanitesDescription" value="Восстанавлевает здоровье механическим юнитам."/>
+
+	<entry name="Terran/Irradiate" value="Облучить"/>
+	<entry name="Terran/Terran/IrradiateDescription" value="Облучает противника, нанося ему урон каждый ход."/>
+
+	<entry name="Terran/FieldResearch" value="Полевые Исследования"/>
+	<entry name="Terran/FieldResearchDescription" value="Пассивно получает очки исследования и влияния, а также за опыт на поле боя."/>
+
+	<entry name="Terran/Shield" value="Защитная матрица"/>
+	<entry name="Terran/ShieldDescription" value="Возводит на дружественном юните щит поглащающий урон."/>
+</language>

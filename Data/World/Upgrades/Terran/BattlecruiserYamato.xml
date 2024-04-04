@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<upgrade position="10" icon="Abilities/Terran/BattlecruiserYamato">
+	<requiredUpgrades>
+		<upgrade name="Terran/Battlecruiser"/>
+	</requiredUpgrades>
+</upgrade>

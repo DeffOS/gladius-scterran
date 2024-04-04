@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trait visible="0">
+	<perTurnModifiers endure="0">
+		<modifier>
+			<conditions>
+				<unit>
+					<actionPoints less="4"/>
+					<actionPoints greater="0"/>
+				</unit>
+			</conditions>
+			<effects>
+				<addTrait name="Terran/ShellLoaded"/>
+			</effects>
+		</modifier>
+	</perTurnModifiers>
+</trait>
