@@ -28,7 +28,7 @@
 				<hitpointsMax base="6"/>
 				<meleeAccuracy base="10"/>
 				<strengthDamage base="1.5"/>
-				<moraleMax base="14"/>
+				<moraleMax base="10"/>
 				<movementMax base="3"/>
 				<rangedAccuracy base="8"/>
 				<cargoSlotsRequired base="2"/>

@@ -28,7 +28,7 @@
 				<meleeAccuracy base="8"/>
 				<meleeAttacks base="1"/>
 				<strengthDamage base="1.5"/>
-				<moraleMax base="14"/>
+				<moraleMax base="10"/>
 				<movementMax base="3"/>
 				<cargoSlotsRequired base="2"/>
 
