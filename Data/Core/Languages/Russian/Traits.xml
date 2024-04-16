@@ -103,8 +103,8 @@
 	<entry name="Terran/UraniumAmmoDescription" value="Увеличивает дальность и бронепробитие стрелкового оружия."/>
 	<entry name="Terran/UraniumAmmoFlavor" value=""/>
 
-	<entry name="Terran/AdvancedOptics" value="Улучшенная оптика"/>
-	<entry name="Terran/AdvancedOpticsDescription" value="Увеличивает дальность стрельбы технике Терранов."/>
+	<entry name="Terran/AdvancedOptics" value="Улучшенная оптика ракет"/>
+	<entry name="Terran/AdvancedOpticsDescription" value="Увеличивает дальность стрельбы ракетами технике Терранов."/>
 	<entry name="Terran/AdvancedOpticsFlavor" value=""/>
 
 	<entry name="Terran/TechArmor" value="Улучшенная броня техники"/>

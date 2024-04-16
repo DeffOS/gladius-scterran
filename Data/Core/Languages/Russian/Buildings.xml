@@ -9,9 +9,9 @@
 	<entry name="Terran/HousingFlavor" value=""/>
 
 	<!-- Resources -->
-	<entry name="Terran/Ore" value="Буровая установка"/>
-	<entry name="Terran/OreDescription" value="Здание, которое добывает минералы."/>
-	<entry name="Terran/OreFlavor" value=""/>
+	<entry name="Terran/Requisitions" value="Буровая установка"/>
+	<entry name="Terran/RequisitionsDescription" value="Здание, которое добывает минералы."/>
+	<entry name="Terran/RequisitionsFlavor" value=""/>
 
 	<entry name="Terran/Biomass" value="Переработчик газа"/>
 	<entry name="Terran/BiomassDescription" value="Здание, которое синтезирует веспен газ."/>
