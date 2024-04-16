@@ -102,7 +102,7 @@
 				</target>
 			</beginTargets>
 		</orbitalScan>
-		<deployFortress name="Terran/DropMule"
+		<genericPlayerAbility name="Terran/DropMule"
 				icon="Units/Terran/Mule"
 				cooldown="4"
 				unit="Terran/MULE"
@@ -126,7 +126,7 @@
 							<noFeature name="GravityWaves"/>
 						</tile>
 					</conditions>
-					<!-- <areas>
+					<areas>
 						<area affects="Unit">
 							<modifiers>
 								<modifier>
@@ -137,10 +137,10 @@
 								</modifier>
 							</modifiers>
 						</area>
-					</areas> -->
+					</areas>
 				</target>
 			</beginTargets>
-		</deployFortress>
+		</genericPlayerAbility>
 	</actions>
 	<startingUnits>
 		<unit type="Terran/SCV"/>

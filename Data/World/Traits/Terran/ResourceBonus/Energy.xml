@@ -11,7 +11,7 @@
 			<conditions>
 				<tile match="Any">
 					<feature name="River"/>
-					<feature name="Coast"/>
+					<feature name="Desert"/>
 				</tile>
 			</conditions>
 			<effects>
