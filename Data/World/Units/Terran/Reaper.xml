@@ -84,7 +84,7 @@
 						soundCount="5"/>
 			</model>
 		</move>
-		<jumpPack cooldown="2">
+		<jumpPack cooldown="3">
 			<model>
 				<action animation="Units/Terran/ReaperJump"
 						sound="Actions/Terran/reaper_jumplaunch0"
@@ -93,24 +93,26 @@
 			<modifiers>
 				<modifier>
 					<effects>
-						<movement min="6"/>
-						<movementMax min="6"/>
+						<movement add="1"/>
+						<movementMax add="1"/>
 					</effects>
 				</modifier>
 			</modifiers>
-			<!-- <endTargets> -->
-				<!-- <target> -->
-					<!-- <areas> -->
-						<!-- <area affects="Unit"> -->
-							<!-- <modifiers> -->
-								<!-- <effects> -->
-									<!-- <addTrait duration="1" name="Unwieldy"/> -->
-								<!-- </effects> -->
-							<!-- </modifiers> -->
-						<!-- </area> -->
-					<!-- </areas> -->
-				<!-- </target> -->
-			<!-- </endTargets> -->
+			<beginTargets>
+				<target>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier requiredUpgrade="Terran/HammerOfWrath">
+									<effects>
+										<addTrait duration="1" name="HammerOfWrath"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
 		</jumpPack>
 		<scout consumedActionPoints="0"
 				consumedMovement="0"
