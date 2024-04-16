@@ -15,9 +15,8 @@
 				<attacks add="1"/>
 				<rangedArmorPenetration add="10"/>
 				<rangedDamage add="22"/>
-				<rangedAccuracy base="8"/>
+				<rangedAccuracy min="12" max="12"/>
 				<strengthDamage base="0"/>
-				<ignoreLineOfSight add="1"/>
 			</effects>
 		</modifier>
 	</modifiers>
@@ -25,6 +24,7 @@
 	<traits>
 		<trait name="ApocalypticBlast"/>
 		<trait name="Terran/SiegeWeapon"/>
+		<trait name="Barrage"/>
 		<trait name="TargetOnlyGround"/>
 	</traits>
 </weapon>
