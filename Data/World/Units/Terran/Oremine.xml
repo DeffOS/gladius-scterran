@@ -18,7 +18,7 @@
 			<effects>
 				<armor base="8"/>
 				<cargoSlots base="2"/>
-				<hitpointsMax base="18.0"/>
+				<hitpointsMax base="16.0"/>
 				<moraleMax base="10"/>
 				<movementMax max="0"/>
 				<sight base="1"/>
