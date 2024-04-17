@@ -105,7 +105,6 @@
 		<genericPlayerAbility name="Terran/DropMule"
 				icon="Units/Terran/Mule"
 				cooldown="4"
-				unit="Terran/MULE"
 				requiredUpgrade="Terran/DropMULE">
 			<modifiers>
 				<modifier visible="0">
@@ -127,11 +126,19 @@
 						</tile>
 					</conditions>
 					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Terran/MULE"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
 						<area affects="Unit">
 							<modifiers>
 								<modifier>
 									<effects>
-										<actionPoints add="1"/>
 										<addTrait duration="3" name="Summon"/>
 									</effects>
 								</modifier>
